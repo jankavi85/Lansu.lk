@@ -161,7 +161,7 @@
 							<div class="product-image-wrapper">
 								<div class="single-products">
 										<div class="productinfo text-center">
-											<img src="images/home/10.jpg" alt="" />
+											<img src="images/home/11.jpg" alt="" />
 											<h2>$56</h2>
 											<p>APPLE5S</p>
 											<a href="#" class="btn btn-default add-to-cart"><i class=""></i>Bid Now</a>
