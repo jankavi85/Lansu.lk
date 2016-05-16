@@ -226,7 +226,7 @@ Add My Items
 									<div class="product-image-wrapper">
 										<div class="single-products">
 											<div class="productinfo text-center">
-												<a href="computers" class="btn btn-default add-to-cart"><img src="images/home/3.png" alt="" /></a>
+												<a href="computers.php" class="btn btn-default add-to-cart"><img src="images/home/3.png" alt="" /></a>
 												<p>COMPUTER</p>
 											</div>
 											
@@ -237,7 +237,7 @@ Add My Items
 									<div class="product-image-wrapper">
 										<div class="single-products">
 											<div class="productinfo text-center">
-												<a href=""http://localhost/k/books.php"" class="btn btn-default add-to-cart"><img src="images/home/5.png" alt="" /></a>
+												<a href="books.php" class="btn btn-default add-to-cart"><img src="images/home/5.png" alt="" /></a>
 												<p>BOOKS</p>
 											</div>
 										</div>
@@ -249,7 +249,7 @@ Add My Items
 									<div class="product-image-wrapper">
 										<div class="single-products">
 											<div class="productinfo text-center">
-												<a href=""http://localhost/k/personnel.php"" class="btn btn-default add-to-cart"><img src="images/home/6.png" alt="" /></a>
+												<a href="personnel.php" class="btn btn-default add-to-cart"><img src="images/home/6.png" alt="" /></a>
 												<p>PERSONNEL ITEMS</p>
 											</div>
 										</div>
@@ -261,7 +261,7 @@ Add My Items
 									<div class="product-image-wrapper">
 										<div class="single-products">
 											<div class="productinfo text-center">
-												<a href=""http://localhost/k/vehicles.php"" class="btn btn-default add-to-cart"><img src="images/home/7.png" alt="" /></a>
+												<a href="vehicles.php" class="btn btn-default add-to-cart"><img src="images/home/7.png" alt="" /></a>
 												<p>VEHICLES AND PARTS</p>
 											</div>
 										</div>
@@ -273,7 +273,7 @@ Add My Items
 									<div class="product-image-wrapper">
 										<div class="single-products">
 											<div class="productinfo text-center">
-												<a href=""http://localhost/k/lands.php"" class="btn btn-default add-to-cart"><img src="images/home/8.png" alt="" /></a>
+												<a href="land.php" class="btn btn-default add-to-cart"><img src="images/home/8.png" alt="" /></a>
 												<p>LAND AND PROPERTY</p>
 											</div>
 										</div>

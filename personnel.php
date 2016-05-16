@@ -161,15 +161,15 @@
 							<div class="product-image-wrapper">
 								<div class="single-products">
 										<div class="productinfo text-center">
-											<img src="images/home/11.jpg" alt="" />
-											<h2>86000LKR</h2>
-											<p>Samsung LED</p>
+											<img src="images/home/15.jpg" alt="" />
+											<h2>900LKR</h2>
+											<p>Rayban New</p>
 											<a href="#" class="btn btn-default add-to-cart"><i class=""></i>Bid Now</a>
 										</div>
 										<div class="product-overlay">
 											<div class="overlay-content">
-												<h2>86000LKR</h2>
-												<p>Samsung LED</p>
+												<h2>900LKR</h2>
+												<p>Rayban New</p>
 												<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Bid Now</a>
 											</div>
 										</div>
