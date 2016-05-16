@@ -1,0 +1,34 @@
+#paneladd{
+	margin-top: 20px;
+	margin-botton :10px;
+	margin-left :240px;
+
+	width : 60%;
+	height : 450px;
+	}
+#direct {
+  border: 2px solid ;
+}	
+#direct:hover {
+  border: 5px solid ;
+  background: #f5a747;
+  background-image: -webkit-linear-gradient(top, #f5a747, #fc9e24);
+  background-image: -moz-linear-gradient(top, #f5a747, #fc9e24);
+  background-image: -ms-linear-gradient(top, #f5a747, #fc9e24);
+  background-image: -o-linear-gradient(top, #f5a747, #fc9e24);
+  background-image: linear-gradient(to bottom, #f5a747, #fc9e24);
+  text-decoration: none;
+}
+
+#bid {
+  border: 2px solid ;
+}
+#bid:hover {
+  background: #f5a747;
+  background-image: -webkit-linear-gradient(top, #f5a747, #fc9e24);
+  background-image: -moz-linear-gradient(top, #f5a747, #fc9e24);
+  background-image: -ms-linear-gradient(top, #f5a747, #fc9e24);
+  background-image: -o-linear-gradient(top, #f5a747, #fc9e24);
+  background-image: linear-gradient(to bottom, #f5a747, #fc9e24);
+  text-decoration: none;
+}
