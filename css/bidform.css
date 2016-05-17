@@ -1,48 +1,115 @@
+#upload{
+ display:inline-block;
+ margin-left: 40px;
+ border:outset;
+ text-align:center;
+ padding-top:15px;
+ width:350px;
+ height:60px;
+ font-style:oblique;
+ 
+}
+#upload:hover{
+   background: #FE980F;
+}
+
+#form {
+  display: block;
+  margin-bottom: 185px;
+  margin-top: 50px;
+  overflow: hidden;
+}
+
+.bid-form {
+
+}
 
 
-#apDiv1 {
-	position:absolute;
-	left:240px;
-	top:62px;
-	width:580px;
-	height:963px;
-	z-index:1;
+.bid-form h2{
+  color: #696763;
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+  font-weight: 300;
+  margin-bottom: 30px;
 }
-.formelement{
-	align:left;
-	width: 300px;
-	border:inset;
-	position:absolute;	
-}
-#button{
-	position:absolute;	
-}
-#paneladd{
-	margin-top: 20px;
-	margin-botton :10px;
-	margin-left :240px;
 
-	width : 60%;
-	height : 900px;
-	}
+
+.bid-form form input[type=text]{
+  background: #F0F0E9;
+  border: medium none;
+  color: #696763;
+  display: block;
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  height: 40px;
+  margin-bottom: 10px;
+  outline: medium none;
+  padding-left: 10px;
+  width: 100%;
+}
+.bid-form form input[type=radio]{
+  margin-left: 10px;
+  margin-right: 20px;
+  
+}
+
+.panel
+{
+	margin-top:20px;
+	margin-bottom:40px;
+}
+
+
+.bid-form form span{
+  line-height: 25px;
+}
+
+.bid-form form span input {
+  width: 15px;
+  float: left;
+  height: 15px;
+  margin-right: 5px;
+}
+.bid-form form select{
+ margin-bottom: 23px;
+ margin-top: 23px;
+}
+.bid-form form button {
+ margin-bottom: 23px;
+  margin-top: 23px;
+}
+
+.bid-form form button{
+  background: #FE980F;
+  border: medium none;
+  border-radius: 0;
+  color: #FFFFFF;
+  display: block;
+  font-family: 'Roboto', sans-serif;
+  padding: 6px 25px;
+}
+
+
+
+.bid-form label{
+	margin-top:20px;
 	
-#button:hover{
-	 border: 1px solid ;
-  background: #f5a747;
-  background-image: -webkit-linear-gradient(top, #f5a747, #fc9e24);
-  background-image: -moz-linear-gradient(top, #f5a747, #fc9e24);
-  background-image: -ms-linear-gradient(top, #f5a747, #fc9e24);
-  background-image: -o-linear-gradient(top, #f5a747, #fc9e24);
-  background-image: linear-gradient(to bottom, #f5a747, #fc9e24);
-  text-decoration: none;
-	
+}
+.bid-form form textarea{
+	margin-top:20px;
 	
 }
 
 
-#button{
-	position: absolute;
-	width:160px;
-	border-radius:10px;
-	border:outset;
+.bid-form label input {
+  border: medium none;
+  display: inline-block;
+  height: 0;
+  margin-bottom: 0;
+  outline: medium none;
+  padding-left: 0;
 }
+
+
+

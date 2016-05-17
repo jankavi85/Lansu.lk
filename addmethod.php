@@ -1,3 +1,4 @@
+<?php include 'sessioncheck.php'; ?>
 <?php include 'header.php' ; ?>
 <link href="css/additem.css" rel="stylesheet">
 

@@ -1,99 +1,144 @@
 <?php include 'header.php' ?>
-
 <link href="css/bidform.css" rel="stylesheet">
+<div class="col-sm-10 col-sm-offset-1">
+<div class="panel panel-warning">
+<section id="form"><!--form-->
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-6 col-sm-offset-1">
+					<div class="bid-form">
+						<h2><b>About Item Details</b></h2>
+						<form name="form2" method="post" action="<?php echo $_SERVER['PHP_SELF'];?>">
+						<label> Category </label>
+						<select name="category" id="category"  required>
+						<option>Animals</option>
+						<option>Cars & Vehicle</option>
+						<option>Computer</option>
+						<option>Education</option>
+						<option>Electronics</option>
+						<option>Hobby, Sport & Kids</option>
+						<option>Home & Garden</option>
+						<option>Fashion</option>
+						<option>Property</option>
+						<option>other</option>
+						</select>
+						<label>Sub Category </label>
+						<select name="sub_category" id="sub_category" required></select>
+						
+						<label> District </label>
+						<select name="district" id="district"  required>
+						<option>Ampara</option>
+						<option>Anuradhapura</option>
+						<option>Badulla</option>
+						<option>Batticaloa</option>
+						<option>Colombo</option>
+						<option>Galle</option>
+						<option>Gampaha</option>
+						<option>Hambantota</option>
+						<option>Jaffna</option>
+						<option>Kalutara</option>
+						<option>Kandy</option>
+						<option>Kegalle</option>
+						<option>Kilinochci</option>
+						<option>Kurunegala</option>
+						<option>Matale</option>
+						<option>Matara</option>
+						<option>Mannar</option>
+						<option>Moneragala</option>
+						<option>Mullativu</option>
+						<option>Nuwara Eliya</option>
+						<option>Polonnaruwa</option>
+						<option>Puttalam</option>
+						<option>Ratnapura</option>
+						<option>Trincomalee</option>
+						<option>Vavuniya</option>
+						
+						
+						
+						</select>
+						<label>Your Area</label>
+						<select name="area" id="area" required></select>
+						
+						<label><h2><b>Add Photos(max 3 photo)</b></h2></label><br>
+						<img src='images/home/upload.jpg' height='150' width='150'></img>
+						<div id='upload'>
+						<h2> Add a Photo</h2>
+						</div><br>
+						
+						<label>Condition</label>
+						<select name="condition" id="condition"  required>
+						<option>Used</option>
+						<option>New</option>
+						</select>
+						
+						<label>Title</label>
+						<input type="text" name='title'  required/>
+						
+						<label>Description</label>
+						<textarea name='description' rows='5' cols='100'></textarea>
+						
+						<label>Price</label>
+						<input type="text" name='price' placeholder='Rs' required/>
+						
+						<label>Phone Number</label>
+						<input type="text" name='phonenumber' required/>
+						
+						<label>Delivery Option</label>
+					<br>
+					<input type="radio" name="deliver" value="meeting" id='d1' checked>
+					<label for='d1'>Meeting Person</label> <br>
+					<input type="radio" name="deliver" value="lansu" id='d2' >
+					<label for='d2'>Lansu Delivery</label>
+					<button type="submit" name='Add Item' class="btn btn-default">Add Item</button>
+					</form>
+					</div>
+				</div>
+				
+				<div class="col-sm-3 ">
+				<br><br><br>
+				<div class="alert alert-warning">
+				Choose category for your bidding item.
+				</div>
+				<br><br><br>
+				<div class="alert alert-warning">
+				Choose sub category for your bidding item.
+				</div>
+				<br><br>
+				<div class="alert alert-warning">
+				choose your district
+				</div>
+				<br><br>
+				<div class="alert alert-warning">
+				choose area, near your place
+				</div>
+				<br><br><br>
+				<div class="alert alert-warning">
+				please upload image files below 5MB.
+				you can upload jpg,png,bmp file types.
+				</div>
+				<br><br><br>
+				<div class="alert alert-warning">
+				how are the bidding item quality.
+				</div>
+				<br><br><br>
+				<div class="alert alert-warning">
+				Enter name for your bidding item.
+				</div>
+				<br><br><br>
+				<div class="alert alert-warning">
+				please give some details about your bidding item.
+				</div>
+				<br><br><br>
+				<div class="alert alert-warning">
+				please give minimum price to your bidding item.
+				</div>
+			 </div>
+			</div>
+		</div>
+	</section>
+</div>
+</div>
 
-<div class="panel panel-default" id='paneladd'>
-  <div class="panel-heading" ><h3>Add Your Details</h3></div>
-  <div class="panel-body" >
-  <div class="container">
- <div class="row">
- <div class="col-sm-4">
-<form>
-  <table width="581" height="645" class="bidform" border="0">
-    <tr>
-      <td width="198">Category</td>
-      <td width="367" ><label for="select2"></label>
-        <select name="category" id="select2" class='formelement' required>
-        </select></td>
-    </tr>
-    <tr><td></td><td></td><tr><tr><tr><td></td><td></td><tr>
-     
-    <tr>
-      <td>Location</td>
-      <td><label for="select"></label>
-        <select name="location" id="select" class='formelement' required>
-        </select></td>
-    </tr>
-      <tr><td></td><td></td><tr><tr><tr><td></td><td></td><tr>
-    <tr>
-      <td>Condition</td>
-      <td><label for="select3"></label>
-        <select name="condition" id="select3" class='formelement' required>
-        </select></td>
-    </tr>
-      <tr><td></td><td></td><tr><tr><tr><td></td><td></td><tr>
-    <tr>
-      <td>Brand</td>
-      <td><label for="select4"></label>
-        <select name="brand" id="select4" class='formelement' required>
-        </select></td>
-    </tr>
-      <tr><td></td><td></td><tr><tr><tr><td></td><td></td><tr>
-    <tr>
-      <td>Model</td>
-      <td><label for="textfield"></label>
-        <input type="text" name="model" id="textfield" class='formelement' required></td>
-    </tr>
-      <tr><td></td><td></td><tr><tr><tr><td></td><td></td><tr>
-    <tr>
-      <td>Description</td>
-      <td><label for="textarea"></label>
-        <textarea name="description" id="description" class='formelement' cols="45" rows="2" required></textarea></td>
-    </tr>
-   <tr><td></td><td></td><tr><tr><td></td><td></td><tr><tr><td></td><td></td><tr><tr><tr><td></td><td></td><tr>
-    <tr>
-      <td>Price</td>
-      <td><label for="textfield2"></label>
-        <input type="text" name="price" class='formelement' id="textfield2" required></td>
-    </tr>
-    
-    <tr>
-      <td>Delivery Option</td>
-      <td><input type="radio" name="radio" id="radio"  value="radio">Meet Person<br>
-       <input type="radio" name="radio2" id="radio2"  value="radio2">Lansu Deliver<br>
-        </td>
-    </tr>
-   
-    <tr>
-      <td>About You</td>
-      <td><label for="textarea2"></label>
-        <textarea name="textarea2" id="textarea2" class='formelement' cols="45" rows="2" required></textarea></td>
-    </tr>
-    <tr><td></td><td></td><tr><tr><td></td><td></td><tr><tr><td></td><td></td><tr><tr><tr><td></td><td></td><tr>
 
-    <tr>
-      <td>Phone no</td>
-      <td><label for="textfield3"></label>
-        <input type="text" name="textfield3" class='formelement' id="textfield3" required></td>
-    </tr>
-	<tr><tr><td></td><td></td><tr>
-    <tr>
-      <td>Address</td>
-      <td><label for="textarea3"></label>
-        <textarea name="textarea3" id="textarea3" class='formelement' cols="45" rows="3"></textarea></td>
-    </tr>
-    <tr><td></td><td></td><tr><tr><td></td><td></td><tr><tr><td></td><td></td><tr><tr><tr><td></td><td></td><tr>
-    <tr>
-      <td>&nbsp;</td>
-      <td><input type="submit" name="button" id="button"  value="Add Item Now"></td>
-    </tr>
-  </table>
-  </form>
 
-</div>
-</div>
-</div>
-</div>
-
-</div>
 <?php include 'footer.php' ?>
