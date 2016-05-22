@@ -123,6 +123,7 @@ else
         	<div class="auto-container clearfix">
                 <!--Logo-->
                 <div class="logo"><a href="index.php"><img src="images/home/logo.png" alt="Bulldozer" title="Bulldozer"></a></div>
+				
                 
                 <!--Right Container-->
                 <div class="right-cont clearfix">
@@ -137,24 +138,26 @@ else
                                 <span class="icon-bar"></span>
                                 <span class="icon-bar"></span>
                             </button>
-                        </div>
+                           </div>
                         
-                        <div class="navbar-collapse collapse clearfix">                    
+                           <div class="navbar-collapse collapse clearfix">                    
                                                                                                         
                             <ul class="nav navbar-nav navbar-right">
                                 <li><a href="index.php"><?php echo HOME; ?></a></li>
-                                <li><a href="items_search.php"><?php echo ALL_ITEMS; ?></a></li>
-								<li><a href="#"><?php echo ABOUT_US; ?></a></li>
-								<li><a href="#"><?php echo FAQ; ?></a></li>
-                                   
-                            <div class="clearfix"></div>
-        
-                        </div>
+                                <li><a href="items_search.php"><?php echo ALL_ITEMS; ?></a></li>  
+								
+                           </div>
+						
                     </nav>
                     <!-- Main Menu End-->
+					
+					
                 </div>
+				
+				<div><a href='addmethod.php' ><div id='addmy'>Add Item</div></a></div>
                 
             </div>
+			
             
         </div>
         

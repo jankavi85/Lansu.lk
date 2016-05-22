@@ -92,7 +92,7 @@ p{
 .auto-container{
 	position:static;
 	max-width:1200px;
-	padding:0px 15px;
+	padding:0px 12px;
 	margin:0 auto;
 }
 
@@ -308,6 +308,43 @@ ul,li{
 ====================================================================
 
 ***/
+
+#addmy {
+
+position: absolute;
+   background: #ffbf00;
+  background-image: -webkit-linear-gradient(top, #ffbf00, #faca08);
+  background-image: -moz-linear-gradient(top, #ffbf00, #faca08);
+  background-image: -ms-linear-gradient(top, #ffbf00, #faca08);
+  background-image: -o-linear-gradient(top, #ffbf00, #faca08);
+  background-image: linear-gradient(to bottom, #ffbf00, #faca08);
+  -webkit-box-shadow: 0px 0px 3px #666666;
+  -moz-box-shadow: 0px 0px 3px #666666;
+  box-shadow: 0px 0px 3px #666666;
+  font-family: Arial;
+  color: #ffffff;
+  width:125px;
+  font-size: 20px;
+  padding: 10px 20px;
+  text-decoration: none;
+  margin-left: 1000px;
+  margin-top: 5px;
+
+  
+  
+}
+
+#addmy:hover {
+	 background: #ffb700;
+  background-image: -webkit-linear-gradient(top, #ffb700, #ffc003);
+  background-image: -moz-linear-gradient(top, #ffb700, #ffc003);
+  background-image: -ms-linear-gradient(top, #ffb700, #ffc003);
+  background-image: -o-linear-gradient(top, #ffb700, #ffc003);
+  background-image: linear-gradient(to bottom, #ffb700, #ffc003);
+  text-decoration: none;
+}
+
+
 
 .main-header{
 	position:relative;
@@ -657,7 +694,7 @@ a.btn_yellow:hover {color: #FFF;}
 	position:relative;
 	float:right;
 	padding:14px 0px;
-	padding-right:60px;
+	padding-right:200px;
 }
 
 .main-header .main-menu{
@@ -687,7 +724,6 @@ a.btn_yellow:hover {color: #FFF;}
 	font-size:14px;
 	line-height:22px;
 	font-weight:600;
-	text-transform:uppercase;
 	color:#393939;
 	opacity:1;
 	z-index:2;
@@ -856,38 +892,9 @@ a.btn_yellow:hover {color: #FFF;}
 }
 
 
-.main-header .search-btn{
-	position:absolute;
-	right:0px;
-	top:14px;
-	width:60px;
-	height:32px;
-	padding-left:30px;
-	cursor:pointer;
-}
 
-.main-header .search-btn .f-icon{
-	position:relative;
-	width:28px;
-	height:32px;
-	line-height:30px;
-	border:2px solid #fbb317;
-	border-left:none;
-	color:#fbb317;
-	text-align:center;
-	padding-right:2px;
-}
 
-.main-header .search-btn .curve{
-	position:absolute;
-	left:22px;
-	top:0px;
-	width:30px;
-	height:32px;
-	border:2px solid #fbb317;
-	border-right:none;
 
-}
 
 .txt-white{
 	color:#ffffff;	

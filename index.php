@@ -1,14 +1,10 @@
 <?php include "header.php"; ?>
 
-<div class="col-sm-4">
-<a href='addmethod.php' ><div id='addmy'>
-Add My Items
-</div></a>
-</div>
+
 	<section id="slider"><!--slider-->
 		<div class="container">
 			<div class="row">
-				<div class="col-sm-8">
+				<div class="col-sm-8 col-sm-offset-4">
 				<div id="slider-carousel" class="carousel slide" data-ride="carousel" style="width:700px; height:300px; margin-left:auto;">
 						<ol class="carousel-indicators">
 							<li data-target="#slider-carousel" data-slide-to="0" class="active"></li>
