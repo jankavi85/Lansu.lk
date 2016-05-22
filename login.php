@@ -91,7 +91,9 @@ function confirmvalid()
 
 </script>
 
-	
+<div class="col-sm-10 col-sm-offset-1">
+<div class="panel panel-warning">
+<div class="panel-body">
 	<section id="form"><!--form-->
 		<div class="container">
 			<div class="row">
@@ -128,8 +130,10 @@ function confirmvalid()
 				</div>
 			</div>
 		</div>
-	</section><!--/form-->
-	
+		</section><!--/form-->
+		</div>
+</div>
+</div>	
 	<?php
 if ($_SERVER["REQUEST_METHOD"] == "POST"){
  if(isset($_POST["signupbutton"]) )

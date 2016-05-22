@@ -1,9 +1,14 @@
 <?php
-	session_start();
+	//session_start();
 ?>
 <!DOCTYPE html>
 <html lang="en">
-<?php include "header.php" ?>
+
+
+<?php 
+ob_start();
+include "header.php" 
+?>
 <?php 
 // over view form
 	include "database/dbconnect.php";
@@ -14,6 +19,7 @@
 	if($result -> num_rows >0){
 		while($row = $result->fetch_assoc()){	
 ?>
+<body>
 	<p> </p>
 	<div class="container">
 		<div class="col-md-1">
@@ -24,11 +30,11 @@
 					<p> </p>
 					<div class="row">
 						<div class="col-md-10">
-							<center><h4> My Profile </h4> </center>
+							<center><h4><?php echo MY_PROFILE; ?> </h4> </center>
 						</div>
 						<div class="col-md-2">
 							<form method="post" action="logout.php">
-						<button class="btn btn-default" name="logout">  LOGOUT </button>
+						<button class="btn btn-default" name="logout"> <?php echo LOGOUT; ?> </button>
 					</form>
 						</div>
 					</div>
@@ -36,11 +42,11 @@
 				</div>
 				<div class="panel-body">
 				<ul class="nav nav-tabs"><!-- User Profile page -->
-					<li class="active"><a data-toggle="tab" href="#overview"> Overview </a></li>
-					<li><a data-toggle="tab" href="#edit"> Edit</a></li>
-					<li><a data-toggle="tab" href="#mybids"> My Bids</a></li>
+					<li class="active"><a data-toggle="tab" href="#overview"> <?php echo OVERVIEW; ?> </a></li>
+					<li><a data-toggle="tab" href="#edit"> <?php echo EDIT; ?></a></li>
+					<li><a data-toggle="tab" href="#mybids"><?php echo  MYBIDS; ?></a></li>
 				<!--	<li><a data-toggle="tab" href="#favorites"> Favorites</a></li> -->
-					<li><a data-toggle="tab" href="#complaints"> Feedback </a> </li>
+					<li><a data-toggle="tab" href="#complaints"><?php echo FEEDBACK;?> </a> </li>
 				</ul>
 					<div class="tab-content">
 						<div id="overview" class="tab-pane fade in active"><center><!--User OverView part -->
@@ -50,7 +56,7 @@
 									<p> </p>
 									<div class="row">
 										<div class="col-md-3">
-											<center>Name </center> 
+											<center><?php echo NAME; ?> </center> 
 										</div>
 										<div class="col-md-9">
 										<span class=" form-control" >
@@ -76,7 +82,7 @@
             						<p> </p>
             						<div class="row">
 										<div class="col-md-3">
-											<center>E-mail </center> 
+											<center><?php echo EMAIL ;?> </center> 
 										</div>
 										<div class="col-md-9">
 											<span class=" form-control"> <!-- Show Login User Email -->
@@ -89,7 +95,7 @@
             						<p> </p>
             						<div class="row">
 										<div class="col-md-3">
-											<center> Telephone </center> 
+											<center><?php echo TELEPHONE; ?> </center> 
 										</div>
 									<div class="col-md-9">
 										<span class=" form-control">

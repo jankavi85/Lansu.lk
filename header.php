@@ -2,7 +2,42 @@
 if(!isset($_SESSION)) 
     { 
         session_start(); 
-    } 
+        if(isset($_SESSION['language'])){
+            if($_SESSION['language']== 'english'){
+                include_once 'translation/en.php';
+            }
+            else if($_SESSION['language']== 'sinhala'){
+                include_once 'translation/si.php';
+            }
+            else if($_SESSION['language']== 'tamil'){
+                include_once 'translation/ta.php';
+            }
+        }
+        else{
+            include_once 'translation/en.php';
+        }
+		
+		
+    }
+else
+    { 
+        if(isset($_SESSION['language'])){
+            if($_SESSION['language']== 'english'){
+                include_once 'translation/en.php';
+            }
+            else if($_SESSION['language']== 'sinhala'){
+                include_once 'translation/si.php';
+            }
+            else if($_SESSION['language']== 'tamil'){
+                include_once 'translation/ta.php';
+            }
+        }
+        else{
+            include_once 'translation/en.php';
+        }
+		
+		
+    }	
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -51,15 +86,16 @@ if(!isset($_SESSION))
                 	
 
                     <ul class="locales">
-                        <li><a href="#">සිංහල</a></li>
-                        <li><a href="#">தமிழ்</a></li>
+                        <li><a href="english.php">English</a></li>
+                        <li><a href="sinhala.php">සිංහල</a></li>
+                        <li><a href="tamil.php">தமிழ்</a></li>
                     </ul>
 
                     <ul class="login-signup">
 					 <?php 		
 	if(isset($_SESSION["lansu_username"]) ) { //Checking whether a user has logged in
 	?>
-				<li><a href="profile.php"><span class="glyphicon glyphicon-user glyphicon-color"></span> My Account</a></li>
+				<li><a href="profile.php"><span class="glyphicon glyphicon-user glyphicon-color"></span> <?php echo MY_ACCOUNT ; ?></a></li>
 	
 	<?php }
 	else{
@@ -106,10 +142,10 @@ if(!isset($_SESSION))
                         <div class="navbar-collapse collapse clearfix">                    
                                                                                                         
                             <ul class="nav navbar-nav navbar-right">
-                                <li><a href="index.php">Home</a></li>
-                                <li><a href="items_search.php">All Items</a></li>
-								<li><a href="#">About Us</a></li>
-								<li><a href="#">Faq</a></li>
+                                <li><a href="index.php"><?php echo HOME; ?></a></li>
+                                <li><a href="items_search.php"><?php echo ALL_ITEMS; ?></a></li>
+								<li><a href="#"><?php echo ABOUT_US; ?></a></li>
+								<li><a href="#"><?php echo FAQ; ?></a></li>
                                    
                             <div class="clearfix"></div>
         

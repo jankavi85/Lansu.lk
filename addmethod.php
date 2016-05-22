@@ -19,12 +19,14 @@
 										
 </div>
 </a>
+<a href="directform.php">
 <div class="col-sm-4" id='direct'>
    <div>
   <img src="images/home/direct.ico" width='300' height='200' alt="" />
 	</div>	
 <font size="6" color="red">Add Item To Direct Sale!</font>
 </div>
+</a>
   
   
   </div>

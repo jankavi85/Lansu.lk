@@ -97,13 +97,13 @@
 				</div>
 				
 				<div class="col-sm-3 ">
-				<br><br><br>
+				<br><br><br><br><br>
 				<div class="alert alert-warning">
-				Choose category for your bidding item.
+				Choose category for your item.
 				</div>
 				<br><br><br>
 				<div class="alert alert-warning">
-				Choose sub category for your bidding item.
+				Choose sub category for your item.
 				</div>
 				<br><br>
 				<div class="alert alert-warning">
@@ -120,19 +120,19 @@
 				</div>
 				<br><br><br>
 				<div class="alert alert-warning">
-				how are the bidding item quality.
+				how are the item quality.
 				</div>
 				<br><br><br>
 				<div class="alert alert-warning">
-				Enter name for your bidding item.
+				Enter name for your item.
 				</div>
 				<br><br><br>
 				<div class="alert alert-warning">
-				please give some details about your bidding item.
+				please give some details about your item.
 				</div>
 				<br><br><br>
 				<div class="alert alert-warning">
-				please give minimum price to your bidding item.
+				please give suitable price to your item.
 				</div>
 			 </div>
 			</div>

@@ -1264,6 +1264,11 @@ h2.title {
   margin-top: 50px;
   overflow: hidden;
 }
+.panel
+{
+margin-bottom: 40px;
+margin-top: 20px;
+}
 
 .login-form {
 
