@@ -1,6 +1,69 @@
 <?php include 'sessioncheck.php'; ?>
 <?php include 'header.php' ?>
+<head>
+
+<link href="Gettime/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
+<link href="Gettime/css/bootstrap-datetimepicker.min.css" rel="stylesheet" media="screen">
 <link href="css/bidform.css" rel="stylesheet">
+</head>
+<script type="text/javascript">
+function loadsub(category) {
+		
+			if (window.XMLHttpRequest) {
+				// code for IE7+, Firefox, Chrome, Opera, Safari
+				xmlhttp = new XMLHttpRequest();
+			} else {
+				// code for IE6, IE5
+				xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+			}
+			xmlhttp.onreadystatechange = function() {
+				if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+					document.getElementById("subcategory").innerHTML = xmlhttp.responseText;
+				}
+			}
+			xmlhttp.open("GET","getsub.php?category="+category,true);
+			//xmlhttp.open("GET","getMadeBy.php?id="+id,true);
+			xmlhttp.send();
+		
+		//alert("bninm");
+	}
+	
+function loadarea(district) {
+		
+			if (window.XMLHttpRequest) {
+				// code for IE7+, Firefox, Chrome, Opera, Safari
+				xmlhttp = new XMLHttpRequest();
+			} else {
+				// code for IE6, IE5
+				xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+			}
+			xmlhttp.onreadystatechange = function() {
+				if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+					document.getElementById("area").innerHTML = xmlhttp.responseText;
+				}
+			}
+			xmlhttp.open("GET","getarea.php?district="+district,true);
+			//xmlhttp.open("GET","getMadeBy.php?id="+id,true);
+			xmlhttp.send();
+		
+		//alert("bninm");
+	}
+	
+	
+	$(function () {
+    $(":file").change(function () {
+        if (this.files && this.files[0]) {
+            var reader = new FileReader();
+            reader.onload = imageIsLoaded;
+            reader.readAsDataURL(this.files[0]);
+        }
+    });
+});
+
+function imageIsLoaded(e) {
+    $('#myImg').attr('src', e.target.result);
+};
+</script>
 <div class="col-sm-10 col-sm-offset-1">
 <div class="panel panel-warning">
 <section id="form"><!--form-->
@@ -10,61 +73,68 @@
 					<div class="bid-form">
 						<h2><b>About Item Details</b></h2>
 						<hr>
-						<form name="form2" method="post" action="<?php echo $_SERVER['PHP_SELF'];?>">
+						<form name="form2" method="post" action="bidformdata.php" enctype='multipart/form-data'>
 						<label> Category </label>
-						<select name="category" id="category"  required>
-						<option>Animals</option>
-						<option>Cars & Vehicle</option>
-						<option>Computer</option>
-						<option>Education</option>
-						<option>Electronics</option>
-						<option>Hobby, Sport & Kids</option>
-						<option>Home & Garden</option>
-						<option>Fashion</option>
-						<option>Property</option>
-						<option>other</option>
+						<select name="category" id="category" onchange="loadsub(this.value)"   required>
+						<option value="">----------------------------------Select a Category----------------------------</option>
+						<option value='Animals'>Animals</option>
+						<option value='CarsVehicles'>Cars & Vehicle</option>
+						<option value='Education'>Education</option>
+						<option value='Electronics'>Electronics</option>
+						<option value='HobbySportKids'>Hobby, Sport & Kids</option>
+						<option value='HomeGarden'>Home & Garden</option>
+						<option value='FashionHealthBeauty'>Fashion & Health,Beauty</option>
+						<option value='Property'>Property</option>
+						<option value='other'>other</option>
 						</select>
+						
 						<label>Sub Category </label>
-						<select name="sub_category" id="sub_category" required></select>
+						<select name="subcategory" id="subcategory" required>
+						<option value="">-----------------------------Select a sub category------------------------------</option>
+						</select>
 						
 						<label> District </label>
-						<select name="district" id="district"  required>
-						<option>Ampara</option>
-						<option>Anuradhapura</option>
-						<option>Badulla</option>
-						<option>Batticaloa</option>
-						<option>Colombo</option>
-						<option>Galle</option>
-						<option>Gampaha</option>
-						<option>Hambantota</option>
-						<option>Jaffna</option>
-						<option>Kalutara</option>
-						<option>Kandy</option>
-						<option>Kegalle</option>
-						<option>Kilinochci</option>
-						<option>Kurunegala</option>
-						<option>Matale</option>
-						<option>Matara</option>
-						<option>Mannar</option>
-						<option>Moneragala</option>
-						<option>Mullativu</option>
-						<option>Nuwara Eliya</option>
-						<option>Polonnaruwa</option>
-						<option>Puttalam</option>
-						<option>Ratnapura</option>
-						<option>Trincomalee</option>
-						<option>Vavuniya</option>
-						
-						
-						
+						<select name="district" id="district" onchange="loadarea(this.value)" required>
+						<option value="">----------------------------------Select a District-------------------------------</option>
+						<option value="Ampara">Ampara</option>
+						<option value="Anuradhapura">Anuradhapura</option>
+						<option value="Badulla">Badulla</option>
+						<option value="Batticaloa">Batticaloa</option>
+						<option value="Colombo">Colombo</option>
+						<option value="Galle">Galle</option>
+						<option value="Gampaha">Gampaha</option>
+						<option value="Hambantota">Hambantota</option>
+						<option value="Jaffna">Jaffna</option>
+						<option value="Kalutara">Kalutara</option>
+						<option value="Kandy">Kandy</option>
+						<option value="Kegalle">Kegalle</option>
+						<option value="Kilinochci">Kilinochci</option>
+						<option value="Kurunegala">Kurunegala</option>
+						<option value="Matale">Matale</option>
+						<option value="Matara">Matara</option>
+						<option value="Mannar">Mannar</option>
+						<option value="Moneragala">Moneragala</option>
+						<option value="Mullativu">Mullativu</option>
+						<option value="Nuwara Eliya">Nuwara Eliya</option>
+						<option value="Polonnaruwa">Polonnaruwa</option>
+						<option value="Puttalam">Puttalam</option>
+						<option value="Ratnapura">Ratnapura</option>
+						<option value="Trincomalee">Trincomalee</option>
+						<option value="Vavuniya">Vavuniya</option>
 						</select>
+						
+						
 						<label>Your Area</label>
-						<select name="area" id="area" required></select>
+						<select name="area" id="area" required>
+						<option value="">--------------------------------Select a your area---------------------------------</option>
+						</select>
+		
+						
 						
 						<label><h2><b>Add Photos(max 3 photo)</b></h2></label><br>
-						<img src='images/home/upload.jpg' height='150' width='150'></img>
+						<img id="myImg" src='images/home/upload.jpg' height='150' width='200'></img>
 						<div id='upload'>
-						<h2> Add a Photo</h2>
+						<input type="file" name="image"  />
 						</div><br>
 						
 						<label>Condition</label>
@@ -82,22 +152,31 @@
 						<label>Price</label>
 						<input type="text" name='price' placeholder='Rs' required/>
 						
-						<label>Phone Number</label>
-						<input type="text" name='phonenumber' required/>
+						<label>Bid Closing Date & Time</label>
+           
+					<div class="input-group date form_datetime" data-date="2016-09-16T05:25:07Z" data-date-format="dd MM yyyy - HH:ii p" data-link-field="dtp_input1">
+                    <input type="text" value="" placeholder='Give suitable time and date' name='data_time' readonly required>
+                    <span class="input-group-addon "><span class="glyphicon glyphicon-remove"></span></span>
+					<span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+					</div>
+
+        
+					<label>Phone Number</label>
+					<input type="text" name='phonenumber' required/>
 						
-						<label>Delivery Option</label>
+				    <label>Delivery Option</label>
 					<br>
 					<input type="radio" name="deliver" value="meeting" id='d1' checked>
 					<label for='d1'>Meeting Person</label> <br>
 					<input type="radio" name="deliver" value="lansu" id='d2' >
 					<label for='d2'>Lansu Delivery</label>
-					<button type="submit" name='Add Item' class="btn btn-default">Add Item</button>
+					<button type="submit" name='AddItem' class="btn btn-default">Add Item</button>
 					</form>
 					</div>
 				</div>
 				
 				<div class="col-sm-3 ">
-				<br><br><br>
+				<br><br><br><br><br><br><br><br><br>
 				<div class="alert alert-warning">
 				Choose category for your bidding item.
 				</div>
@@ -140,7 +219,40 @@
 	</section>
 </div>
 </div>
-
-
-
 <?php include 'footer.php' ?>
+<script type="text/javascript" src="Gettime/jquery/jquery-1.8.3.min.js" charset="UTF-8"></script>
+<script type="text/javascript" src="Gettime/bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="Gettime/js/bootstrap-datetimepicker.js" charset="UTF-8"></script>
+<script type="text/javascript">
+    $('.form_datetime').datetimepicker({
+        //language:  'fr',
+        weekStart: 1,
+        todayBtn:  1,
+		autoclose: 1,
+		todayHighlight: 1,
+		startView: 2,
+		forceParse: 0,
+        showMeridian: 1
+    });
+	$('.form_date').datetimepicker({
+        language:  'fr',
+        weekStart: 1,
+        todayBtn:  1,
+		autoclose: 1,
+		todayHighlight: 1,
+		startView: 2,
+		minView: 2,
+		forceParse: 0
+    });
+	$('.form_time').datetimepicker({
+        language:  'fr',
+        weekStart: 1,
+        todayBtn:  1,
+		autoclose: 1,
+		todayHighlight: 1,
+		startView: 1,
+		minView: 0,
+		maxView: 1,
+		forceParse: 0
+    });
+</script>

@@ -1,11 +1,8 @@
-.glyphicon {
-    font-size: 15px;
-}
-
 #upload{
  display:inline-block;
  margin-left: 40px;
  text-align:center;
+ padding-top:15px;
  width:350px;
  height:60px;
  font-style:oblique;
@@ -13,7 +10,7 @@
 }
 /*#upload:hover{
    background: #FE980F;
-} */
+}*/
 
 #form {
   display: block;
@@ -76,7 +73,6 @@
 .bid-form form select{
  margin-bottom: 23px;
  margin-top: 23px;
- height: 40px;
 }
 .bid-form form button {
  margin-bottom: 23px;
