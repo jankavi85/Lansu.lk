@@ -74,7 +74,7 @@ $category=$_GET['id'];
 							<div class="panel panel-default">
 								<div class="panel-heading">
 									<h4 class="panel-title">
-										<a data-toggle="collapse" data-parent="#accordian" href="#womens">
+										<a data-toggle="collapse" data-parent="#accordian" href="#mens">
 											<span class="badge pull-right"><i class="fa fa-plus"></i></span>
 											LAND & PROPERTY
 										</a>
@@ -91,10 +91,11 @@ $category=$_GET['id'];
 									</div>
 								</div>
 							</div>
-							<div class="panel panel-default">
+							
+						<div class="panel panel-default">
 								<div class="panel-heading">
 									<h4 class="panel-title">
-										<a data-toggle="collapse" data-parent="#accordian" href="#womens">
+										<a data-toggle="collapse" data-parent="#accordian" href="#mens">
 											<span class="badge pull-right"><i class="fa fa-plus"></i></span>
 											HOME & GARDEN
 										</a>
@@ -110,11 +111,11 @@ $category=$_GET['id'];
 										</ul>
 									</div>
 								</div>
-							</div>
+							</div> 
 								<div class="panel panel-default">
 								<div class="panel-heading">
 									<h4 class="panel-title">
-										<a data-toggle="collapse" data-parent="#accordian" href="#womens">
+										<a data-toggle="collapse" data-parent="#accordian" href="#mens">
 											<span class="badge pull-right"><i class="fa fa-plus"></i></span>
 											FASHION HEALTH & BEAUTY
 										</a>
@@ -138,7 +139,7 @@ $category=$_GET['id'];
 							  <div class="panel panel-default">
 								<div class="panel-heading">
 									<h4 class="panel-title">
-										<a data-toggle="collapse" data-parent="#accordian" href="#womens">
+										<a data-toggle="collapse" data-parent="#accordian" href="#mens">
 											<span class="badge pull-right"><i class="fa fa-plus"></i></span>
 											HOBBY SPORT & KIDS
 										</a>
@@ -162,7 +163,7 @@ $category=$_GET['id'];
 							<div class="panel panel-default">
 								<div class="panel-heading">
 									<h4 class="panel-title">
-										<a data-toggle="collapse" data-parent="#accordian" href="#womens">
+										<a data-toggle="collapse" data-parent="#accordian" href="#mens">
 											<span class="badge pull-right"><i class="fa fa-plus"></i></span>
 											EDUCATION
 										</a>
@@ -180,7 +181,7 @@ $category=$_GET['id'];
 							<div class="panel panel-default">
 								<div class="panel-heading">
 									<h4 class="panel-title">
-										<a data-toggle="collapse" data-parent="#accordian" href="#womens">
+										<a data-toggle="collapse" data-parent="#accordian" href="#mens">
 											<span class="badge pull-right"><i class="fa fa-plus"></i></span>
 											ANIMALS
 										</a>
@@ -210,14 +211,15 @@ $category=$_GET['id'];
 				
 				<div class="col-sm-9 padding-right">
 					<div class="features_items"><!--features_items-->
-						<h2 class="title text-center">Current Items</h2>
+						<h2 class="title text-center">Direct Selling Items - <?php echo $category; ?></h2>
 	<?php			
 				
 include "database/dbconnect.php";
 $sql="SELECT sub_category,district,district_area,conditionOn,item_avatar,title,description,price,delivery_option,user_name,phone_number FROM directitem INNER JOIN user on directitem.user_id=user.user_id WHERE category='$category';";
 $result = mysqli_query($dbconnection, $sql);
-
+$count=0;
 while($rows = mysqli_fetch_array($result)){
+	$count++;
 ?>
 				
 				
@@ -225,23 +227,23 @@ while($rows = mysqli_fetch_array($result)){
 							<div class="product-image-wrapper">
 								<div class="single-products">
 										<div class="productinfo text-center">
-											<img src="<?php echo $rows['item_avatar']; ?>" alt="" />
-											<h2><?php echo $rows['sub_category']; ?></h2>
-											<p><?php echo $rows['district']; ?></p>
-											<a href="#" class="btn btn-default add-to-cart"><i class=""></i>Get Now</a>
+											<img src="<?php echo $rows['item_avatar']; ?>" height='180'alt="" />
+											<h2><?php echo $rows['title'];?></h2>
+											<p><?php echo $rows['sub_category'];  ?></p>
+											<a href="#" class="btn btn-default add-to-cart"><i class=""></i>Get Full Details</a>
 										</div>
-										<div class="product-overlay">
+										<!--<div class="product-overlay">
 											<div class="overlay-content">
-												<h2><?php echo $rows['price']; ?></h2>
-												<p><?php echo $rows['description']; ?></p>
+												<h2><?php// echo "Rs. ".$rows['price']; ?></h2>
+												<p><?php //echo $rows['description']; ?></p>
 												<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Get Now</a>
 											</div>
-										</div>
+										</div>   -->
 								</div>
 								<div class="choose">
 									<ul class="nav nav-pills nav-justified">
-										<li><a href="#"><i class="fa fa-plus-square"></i><?php echo $rows['phone_number']; ?></a></li>
-										<li><a href="#"><i class="fa fa-plus-square"></i><?php echo $rows['title']; ?></a></li>
+										<li><a href="#"><i class="fa fa-plus-square"></i><?php echo $rows['district_area']; ?></a></li>
+										<li><a href="#"><i class="fa fa-plus-square"></i><?php  echo $rows['district']; ?></a></li>
 									</ul>
 								</div>
 							</div>
@@ -253,9 +255,13 @@ while($rows = mysqli_fetch_array($result)){
 						
 					
 	
-<?php } ?>
-	
-					</div><!--features_items-->
+<?php 
+if($count%3==0)
+{
+	echo nl2br('');
+}
+} ?>
+</div><!--features_items-->
 					
 					
 					
@@ -263,7 +269,8 @@ while($rows = mysqli_fetch_array($result)){
 				</div>
 			</div>
 		</div>
-	</section>
+	</section>	
+					
 <?php
 include "footer.php" ; ?>
 	

@@ -70,6 +70,9 @@ $userid= $rows['user_id'];
 
  $result = mysqli_query($dbconnection, $sql);
  
+ $sql2="UPDATE user SET phone_number='$phonenumber' WHERE user_id='$userid'";
+ $result2 = mysqli_query($dbconnection, $sql2);
+ 
  header('Location:index.php');
 
  ?>

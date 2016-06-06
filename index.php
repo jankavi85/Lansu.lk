@@ -151,7 +151,7 @@
 										</a>
 									</h4>
 								</div>
-								<div id="womens" class="panel-collapse collapse">
+								<div id="womens1" class="panel-collapse collapse">
 									<div class="panel-body">
 										<ul>
 											<li><a href="#">Furniture</a></li>
@@ -171,7 +171,7 @@
 										</a>
 									</h4>
 								</div>
-								<div id="womens" class="panel-collapse collapse">
+								<div id="womens2" class="panel-collapse collapse">
 									<div class="panel-body">
 										<ul>
 											<li><a href="#">Clothing</a></li>
@@ -195,7 +195,7 @@
 										</a>
 									</h4>
 								</div>
-								<div id="womens" class="panel-collapse collapse">
+								<div id="womens3" class="panel-collapse collapse">
 									<div class="panel-body">
 										<ul>
 											<li><a href="#">Musical Instruments</a></li>
@@ -219,7 +219,7 @@
 										</a>
 									</h4>
 								</div>
-								<div id="womens" class="panel-collapse collapse">
+								<div id="womens4" class="panel-collapse collapse">
 									<div class="panel-body">
 										<ul>
 											<li><a href="#">Textbooks</a></li>
@@ -237,7 +237,7 @@
 										</a>
 									</h4>
 								</div>
-								<div id="womens" class="panel-collapse collapse">
+								<div id="womens5" class="panel-collapse collapse">
 									<div class="panel-body">
 										<ul>
 											<li><a href="#">Pets </a></li>
@@ -412,7 +412,7 @@
 									<div class="product-image-wrapper">
 										<div class="single-products">
 											<div class="productinfo text-center">
-												<a href="ddirectcategory.php?id=HobbySportKids" class="btn btn-default add-to-cart"><img src="images/home/2.png" alt="" /></a>
+												<a href="directcategory.php?id=HobbySportKids" class="btn btn-default add-to-cart"><img src="images/home/2.png" alt="" /></a>
 												<p>HOBBY SPORT & KIDS</p>
 											</div>
 											
