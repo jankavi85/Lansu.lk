@@ -63,13 +63,14 @@ $userid= $rows['user_id'];
 	  $phonenumber = $_POST['phonenumber'];
 	  $deliver= $_POST['deliver'];
 	  $date = date('Y-m-d H:i:s');
+	  $address= $_POST['address'];
 	
 	 
  $sql="INSERT INTO directitem(user_id,category,sub_category,district,district_area,conditionOn,item_avatar,title,description,price,delivery_option,addingtime,item_accept)VALUES('$userid','$category','$sub_category','$district','$area','$condition','$item_avatar','$title','$description','$price','$deliver','$date','0')";	
 
  $result = mysqli_query($dbconnection, $sql);
  
- $sql2="UPDATE user SET phone_number='$phonenumber' WHERE user_id='$userid'";
+ $sql2="UPDATE user SET phone_number='$phonenumber' , address='$address' WHERE user_id='$userid'";
  $result2 = mysqli_query($dbconnection, $sql2);
  
  header('Location:index.php');

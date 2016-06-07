@@ -28,7 +28,7 @@
 							<div class="item">
 								<div class="col-sm-6">
 									<h1><span>L</span>ansu.lk</h1>
-									<h2>Fast Bidding Site in Srilanka...</h2>
+									<h2>Reliable direct selling Site in Srilanka...</h2>
 									<p>Reliable and user friendly bidding system in Sri Lankan domestic market. </p>
 									<button type="button" class="btn btn-default get">Get it now</button>
 								</div>

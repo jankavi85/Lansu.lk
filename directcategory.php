@@ -4,6 +4,7 @@ $category=$_GET['id'];
 
 
 ?>
+<link href="css/directcategory.css" rel="stylesheet">
 	<section id="slider"><!--slider-->
 		<div class="container">
 			<div class="row">
@@ -215,7 +216,7 @@ $category=$_GET['id'];
 	<?php			
 				
 include "database/dbconnect.php";
-$sql="SELECT sub_category,district,district_area,conditionOn,item_avatar,title,description,price,delivery_option,user_name,phone_number FROM directitem INNER JOIN user on directitem.user_id=user.user_id WHERE category='$category';";
+$sql="SELECT directitem_id,sub_category,district,district_area,conditionOn,item_avatar,title,description,price,delivery_option,user_name,phone_number FROM directitem INNER JOIN user on directitem.user_id=user.user_id WHERE category='$category';";
 $result = mysqli_query($dbconnection, $sql);
 $count=0;
 while($rows = mysqli_fetch_array($result)){
@@ -223,14 +224,14 @@ while($rows = mysqli_fetch_array($result)){
 ?>
 				
 				
-						<div class="col-sm-4">
+					<a href="viewdirect.php?value=<?php echo $rows['directitem_id']; ?>">	<div class="col-sm-4 borderdirect">
 							<div class="product-image-wrapper">
 								<div class="single-products">
 										<div class="productinfo text-center">
 											<img src="<?php echo $rows['item_avatar']; ?>" height='180'alt="" />
 											<h2><?php echo $rows['title'];?></h2>
 											<p><?php echo $rows['sub_category'];  ?></p>
-											<a href="#" class="btn btn-default add-to-cart"><i class=""></i>Get Full Details</a>
+											
 										</div>
 										<!--<div class="product-overlay">
 											<div class="overlay-content">
@@ -242,13 +243,15 @@ while($rows = mysqli_fetch_array($result)){
 								</div>
 								<div class="choose">
 									<ul class="nav nav-pills nav-justified">
-										<li><a href="#"><i class="fa fa-plus-square"></i><?php echo $rows['district_area']; ?></a></li>
-										<li><a href="#"><i class="fa fa-plus-square"></i><?php  echo $rows['district']; ?></a></li>
+										<li align="center"><?php  echo $rows['district']." / ".$rows['district_area']; ?></li>
+										</ul>
+										<ul class="nav nav-pills nav-justified">
+										<li align="center"><a href="viewdirect.php?value=<?php echo $rows['directitem_id']; ?>" class="btn btn-default add-to-cart"><i class=""></i>Get Full Details</a></li>
 									</ul>
 								</div>
 							</div>
 						</div>
-						
+						</a>
 						
 						
 						

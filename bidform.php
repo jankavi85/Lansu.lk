@@ -64,6 +64,38 @@ function imageIsLoaded(e) {
     $('#myImg').attr('src', e.target.result);
 };
 </script>
+<script type="text/javascript">
+function ValidateMobNumber(txtMobId) {
+  var fld = document.getElementById(txtMobId);
+
+  if (isNaN(fld.value)) {
+  alert("The phone number contains illegal characters.");
+  fld.value="";
+  fld.focus();
+  return false;
+ }
+ else if (!(fld.value.length == 10 || fld.value.length == 0)) {
+  alert("The phone number is the wrong length. \nPlease enter 10 digit mobile no.");
+  fld.value="";
+  fld.focus();
+  return false;
+ }
+
+}
+</script>
+
+<script type="text/javascript">
+function validateprice(price) {
+  var fld = document.getElementById(price);
+
+  if (isNaN(fld.value)) {
+  alert("The phone number contains illegal characters.");
+  fld.value="";
+  fld.focus();
+  return false;
+ }
+}
+</script>
 <div class="col-sm-10 col-sm-offset-1">
 <div class="panel panel-warning">
 <section id="form"><!--form-->
@@ -144,25 +176,28 @@ function imageIsLoaded(e) {
 						</select>
 						
 						<label>Title</label>
-						<input type="text" name='title'  required/>
+						<input type="text" name='title' placeholder='title*' required/>
 						
 						<label>Description</label>
-						<textarea name='description' rows='5' cols='100'></textarea>
+						<textarea name='description' rows='5' cols='100' placeholder='description*'></textarea>
 						
 						<label>Price</label>
-						<input type="text" name='price' placeholder='Rs' required/>
+						<input type="text" name='price' placeholder='Rs *' id='price' onBlur="return validateprice('price')" required/>
 						
 						<label>Bid Closing Date & Time</label>
            
 					<div class="input-group date form_datetime" data-date="2016-09-16T05:25:07Z" data-date-format="dd MM yyyy - HH:ii p" data-link-field="dtp_input1">
-                    <input type="text" value="" placeholder='Give suitable time and date' name='data_time' readonly required>
+                    <input type="text" value="" placeholder='Give suitable time and date **' name='data_time' readonly required>
                     <span class="input-group-addon "><span class="glyphicon glyphicon-remove"></span></span>
 					<span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
 					</div>
 
         
 					<label>Phone Number</label>
-					<input type="text" name='phonenumber' required/>
+					<input type="text" name='phonenumber' placeholder='phone number *' id='phonenumber' onBlur="return ValidateMobNumber('phonenumber')"required/>
+					
+					<label>Address</label>
+					<input type="text" name='address' placeholder='Address' />
 						
 				    <label>Delivery Option</label>
 					<br>

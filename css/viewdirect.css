@@ -1,0 +1,24 @@
+#paneladd{
+	margin-top: 20px;
+	margin-bottom :10px;
+	margin-left :140px;
+
+	width : 70%;
+	height : 650px;
+	}
+
+.glyphicon.glyphicon-th-large {
+    font-size: 20px;
+}
+.glyphicon.glyphicon-th {
+    font-size: 20px;
+}
+.glyphicon.glyphicon-map-marker {
+    font-size: 20px;
+}
+.glyphicon.glyphicon-road {
+    font-size: 20px;
+}
+glyphicon.glyphicon-phone{
+    font-size: 20px;
+}
