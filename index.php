@@ -296,11 +296,11 @@
 						<!-- kemal-->
 						<div class="tab-content">
 							<div class="tab-pane fade active in" id="tshirt" >
-								<div class="col-sm-3">
+							<div class="col-sm-3">
 									<div class="product-image-wrapper">
 										<div class="single-products">
 											<div class="productinfo text-center">
-												<a href="electronics.php" class="btn btn-default add-to-cart"><img src="images/home/1.png" alt="" /></a>
+												<a href="bidcategory.php?id=Electronics" class="btn btn-default add-to-cart"><img src="images/home/category/3.png" alt="" /></a>
 												<p>ELECTRONICS</p>
 												
 											</div>
@@ -312,8 +312,8 @@
 									<div class="product-image-wrapper">
 										<div class="single-products">
 											<div class="productinfo text-center">
-												<a href="sports.php" class="btn btn-default add-to-cart"><img src="images/home/2.png" alt="" /></a>
-												<p>SPORT ITEMS</p>
+												<a href="bidcategory.php?id=HobbySportKids" class="btn btn-default add-to-cart"><img src="images/home/category/2.png" alt="" /></a>
+												<p>HOBBY SPORT & KIDS</p>
 											</div>
 											
 										</div>
@@ -323,8 +323,8 @@
 									<div class="product-image-wrapper">
 										<div class="single-products">
 											<div class="productinfo text-center">
-												<a href="mobile.php" class="btn btn-default add-to-cart"><img src="images/home/4.png" alt="" /></a>
-												<p>MOBILE</p>
+												<a href="bidcategory.php?id=HomeGarden" class="btn btn-default add-to-cart"><img src="images/home/category/112.png" alt="" /></a>
+												<p>HOME & GARDEN</p>
 											</div>
 											
 										</div>
@@ -334,8 +334,8 @@
 									<div class="product-image-wrapper">
 										<div class="single-products">
 											<div class="productinfo text-center">
-												<a href="computers.php" class="btn btn-default add-to-cart"><img src="images/home/3.png" alt="" /></a>
-												<p>COMPUTER</p>
+												<a href="bidcategory.php?id=Animals" class="btn btn-default add-to-cart"><img src="images/home/category/111.png" alt="" /></a>
+												<p> ANIMALS</p>
 											</div>
 											
 										</div>
@@ -345,8 +345,8 @@
 									<div class="product-image-wrapper">
 										<div class="single-products">
 											<div class="productinfo text-center">
-												<a href="books.php" class="btn btn-default add-to-cart"><img src="images/home/5.png" alt="" /></a>
-												<p>BOOKS</p>
+												<a href="bidcategory.php?id=Education" class="btn btn-default add-to-cart"><img src="images/home/category/5.png" alt="" /></a>
+												<p>EDUCATION</p>
 											</div>
 										</div>
 										
@@ -357,8 +357,8 @@
 									<div class="product-image-wrapper">
 										<div class="single-products">
 											<div class="productinfo text-center">
-												<a href="personnel.php" class="btn btn-default add-to-cart"><img src="images/home/6.png" alt="" /></a>
-												<p>PERSONNEL ITEMS</p>
+												<a href="bidcategory.php?id=FashionHealthBeauty" class="btn btn-default add-to-cart"><img src="images/home/category/6.png" alt="" /></a>
+												<p>FASHION HEALTH & BEAUTY</p>
 											</div>
 										</div>
 										
@@ -369,8 +369,8 @@
 									<div class="product-image-wrapper">
 										<div class="single-products">
 											<div class="productinfo text-center">
-												<a href="vehicles.php" class="btn btn-default add-to-cart"><img src="images/home/7.png" alt="" /></a>
-												<p>VEHICLES AND PARTS</p>
+												<a href="bidcategory.php?id=CarsVehicles" class="btn btn-default add-to-cart"><img src="images/home/category/7.png" alt="" /></a>
+												<p>CARS & VEHICLES</p>
 											</div>
 										</div>
 										
@@ -381,7 +381,7 @@
 									<div class="product-image-wrapper">
 										<div class="single-products">
 											<div class="productinfo text-center">
-												<a href="land.php" class="btn btn-default add-to-cart"><img src="images/home/8.png" alt="" /></a>
+												<a href="bidcategory.php?id=Property" class="btn btn-default add-to-cart"><img src="images/home/category/8.png" alt="" /></a>
 												<p>LAND AND PROPERTY</p>
 											</div>
 										</div>
@@ -400,7 +400,7 @@
 									<div class="product-image-wrapper">
 										<div class="single-products">
 											<div class="productinfo text-center">
-												<a href="directcategory.php?id=Electronics" class="btn btn-default add-to-cart"><img src="images/home/3.png" alt="" /></a>
+												<a href="directcategory.php?id=Electronics" class="btn btn-default add-to-cart"><img src="images/home/category/3.png" alt="" /></a>
 												<p>ELECTRONICS</p>
 												
 											</div>
@@ -412,7 +412,7 @@
 									<div class="product-image-wrapper">
 										<div class="single-products">
 											<div class="productinfo text-center">
-												<a href="directcategory.php?id=HobbySportKids" class="btn btn-default add-to-cart"><img src="images/home/2.png" alt="" /></a>
+												<a href="directcategory.php?id=HobbySportKids" class="btn btn-default add-to-cart"><img src="images/home/category/2.png" alt="" /></a>
 												<p>HOBBY SPORT & KIDS</p>
 											</div>
 											
@@ -423,7 +423,7 @@
 									<div class="product-image-wrapper">
 										<div class="single-products">
 											<div class="productinfo text-center">
-												<a href="directcategory.php?id=HomeGarden" class="btn btn-default add-to-cart"><img src="images/home/112.png" alt="" /></a>
+												<a href="directcategory.php?id=HomeGarden" class="btn btn-default add-to-cart"><img src="images/home/category/112.png" alt="" /></a>
 												<p>HOME & GARDEN</p>
 											</div>
 											
@@ -434,7 +434,7 @@
 									<div class="product-image-wrapper">
 										<div class="single-products">
 											<div class="productinfo text-center">
-												<a href="directcategory.php?id=Animals" class="btn btn-default add-to-cart"><img src="images/home/111.png" alt="" /></a>
+												<a href="directcategory.php?id=Animals" class="btn btn-default add-to-cart"><img src="images/home/category/111.png" alt="" /></a>
 												<p> ANIMALS</p>
 											</div>
 											
@@ -445,7 +445,7 @@
 									<div class="product-image-wrapper">
 										<div class="single-products">
 											<div class="productinfo text-center">
-												<a href="directcategory.php?id=Education" class="btn btn-default add-to-cart"><img src="images/home/5.png" alt="" /></a>
+												<a href="directcategory.php?id=Education" class="btn btn-default add-to-cart"><img src="images/home/category/5.png" alt="" /></a>
 												<p>EDUCATION</p>
 											</div>
 										</div>
@@ -457,7 +457,7 @@
 									<div class="product-image-wrapper">
 										<div class="single-products">
 											<div class="productinfo text-center">
-												<a href="directcategory.php?id=FashionHealthBeauty" class="btn btn-default add-to-cart"><img src="images/home/6.png" alt="" /></a>
+												<a href="directcategory.php?id=FashionHealthBeauty" class="btn btn-default add-to-cart"><img src="images/home/category/6.png" alt="" /></a>
 												<p>FASHION HEALTH & BEAUTY</p>
 											</div>
 										</div>
@@ -469,7 +469,7 @@
 									<div class="product-image-wrapper">
 										<div class="single-products">
 											<div class="productinfo text-center">
-												<a href="directcategory.php?id=CarsVehicles" class="btn btn-default add-to-cart"><img src="images/home/7.png" alt="" /></a>
+												<a href="directcategory.php?id=CarsVehicles" class="btn btn-default add-to-cart"><img src="images/home/category/7.png" alt="" /></a>
 												<p>CARS & VEHICLES</p>
 											</div>
 										</div>
@@ -481,7 +481,7 @@
 									<div class="product-image-wrapper">
 										<div class="single-products">
 											<div class="productinfo text-center">
-												<a href="directcategory.php?id=Property" class="btn btn-default add-to-cart"><img src="images/home/8.png" alt="" /></a>
+												<a href="directcategory.php?id=Property" class="btn btn-default add-to-cart"><img src="images/home/category/8.png" alt="" /></a>
 												<p>LAND AND PROPERTY</p>
 											</div>
 										</div>

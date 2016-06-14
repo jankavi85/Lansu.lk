@@ -196,28 +196,28 @@ include "header.php"
 				<p> </p>
 				<div class="row">
 				<div class="col-md-4">
-				</center><img src="images/sold.png" width="145px" height="175px"></center>
+				</center><img src="images/profile/sold.png" width="145px" height="175px"></center>
 				</div>
 				<div class="col-md-4">
-				</center><img src="images/sold.png" width="145px" height="175px"></center>
+				</center><img src="images/profile/sold.png" width="145px" height="175px"></center>
 				</div>
 				<div class="col-md-4">
-				<center><img src="images/sold.png" width="145px" height="175px"></center>
+				<center><img src="images/profile/sold.png" width="145px" height="175px"></center>
 				</div>
 				</div>
 
 				<div class="row">
 				<div class="col-md-3">
-				<img src="images/sold.png" width="145px" height="175px">
+				<img src="images/profile/sold.png" width="145px" height="175px">
 				</div>
 				<div class="col-md-3">
-				<img src="images/sold.png" width="145px" height="175px">
+				<img src="images/profile/sold.png" width="145px" height="175px">
 				</div>
 				<div class="col-md-3">
-				<img src="images/sold.png" width="145px" height="175px">
+				<img src="images/profile/sold.png" width="145px" height="175px">
 				</div>
 				<div class="col-md-3">
-				<img src="images/sold.png" width="145px" height="175px">
+				<img src="images/profile/sold.png" width="145px" height="175px">
 				</div>
 				</div>
 

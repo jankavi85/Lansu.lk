@@ -160,7 +160,7 @@ function validateprice(price) {
 
 						
 						<label><h2><b>Add Photos(max 3 photo)</b></h2></label><br>
-						<img id="myImg" src='images/home/upload.jpg' height='150' width='200'></img>
+						<img id="myImg" src='images/form/upload.jpg' height='150' width='200'></img>
 						<div id='upload'>
 						<input type="file" name="image"  />
 						</div><br>

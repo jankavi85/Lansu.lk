@@ -13,7 +13,7 @@
   <a href="bidform.php">
   <div class="col-sm-4" id='bid'>
 	 <div>
-	<img src="images/home/bid.png" width='300' height='200' alt="" />
+	<img src="images/form/bid.png" width='300' height='200' alt="" />
 	</div>
 	<font size="6" color="red">Add Item To Bid!</font>
 										
@@ -22,7 +22,7 @@
 <a href="directform.php">
 <div class="col-sm-4" id='direct'>
    <div>
-  <img src="images/home/direct.ico" width='300' height='200' alt="" />
+  <img src="images/form/direct.ico" width='300' height='200' alt="" />
 	</div>	
 <font size="6" color="red">Add Item To Direct Sale!</font>
 </div>
