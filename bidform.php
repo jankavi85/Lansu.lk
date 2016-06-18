@@ -96,18 +96,30 @@ function validateprice(price) {
  }
 }
 </script>
+<script type="text/javascript">
+function display() {
+	var select = document.form2.category.value;  
+	if(select=='CarsVehicles' || select=='Electronics' ||select=='HobbySportKids' ||select=='FashionHealthBeauty'){
+	var myElements = document.querySelectorAll(".dis");
+	for (var i = 0; i < myElements.length; i++) {
+    myElements[i].style.display = 'block';
+	}
+	}
+  
+  }
+</script>
+<div class="container">
 <div class="col-sm-10 col-sm-offset-1">
 <div class="panel panel-warning">
 <section id="form"><!--form-->
-		<div class="container">
 			<div class="row">
-				<div class="col-sm-6 col-sm-offset-1">
+				<div class="col-sm-8 col-sm-offset-1">
 					<div class="bid-form">
 						<h2><b>About Item Details</b></h2>
 						<hr>
 						<form name="form2" method="post" action="bidformdata.php" enctype='multipart/form-data'>
 						<label> Category </label>
-						<select name="category" id="category" onchange="loadsub(this.value)"   required>
+						<select name="category" id="category" onchange="loadsub(this.value); display();"   required>
 						<option value="">----------------------------------Select a Category----------------------------</option>
 						<option value='Animals'>Animals</option>
 						<option value='CarsVehicles'>Cars & Vehicle</option>
@@ -169,8 +181,8 @@ function validateprice(price) {
 						<input type="file" name="image"  />
 						</div><br>
 						
-						<label>Condition</label>
-						<select name="condition" id="condition"  required>
+						<label class='dis'>Condition</label>
+						<select name="condition" id="condition" class='dis' required>
 						<option>Used</option>
 						<option>New</option>
 						</select>
@@ -184,13 +196,30 @@ function validateprice(price) {
 						<label>Price</label>
 						<input type="text" name='price' placeholder='Rs *' id='price' onBlur="return validateprice('price')" required/>
 						
+						<label>Price Increment</label>
+						<select name="priceIncrement" id="priceIncrement" required>
+						<option>---------------------select price increment--------------------</option>
+						<option>50</option>
+						<option>100</option>
+						<option>200</option>
+						<option>500</option>
+						<option>1000</option>
+						<option>2000</option>
+						<option>5000</option>
+						<option>10000</option>
+						</select>
+						
+						
 						<label>Bid Closing Date & Time</label>
-           
-					<div class="input-group date form_datetime" data-date="2016-09-16T05:25:07Z" data-date-format="dd MM yyyy - HH:ii p" data-link-field="dtp_input1">
-                    <input type="text" value="" placeholder='Give suitable time and date **' name='data_time' readonly required>
-                    <span class="input-group-addon "><span class="glyphicon glyphicon-remove"></span></span>
-					<span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+				
+					<div class="input-group input-group-lg date form_datetime" data-date="2016-09-16T05:25:07Z" data-date-format="MM dd, yyyy - HH:ii:ss p" data-link-field="dtp_input1">
+                    <input type="" id='time1'  class="form-control" placeholder='Give suitable time and date **' name='data_time' readonly required>
+                    <span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
+					<span class="input-group-addon"><span class="glyphicon glyphicon-calendar" ></span></span>
 					</div>
+					
+					
+				
 
         
 					<label>Phone Number</label>
@@ -250,8 +279,9 @@ function validateprice(price) {
 				</div>
 			 </div>
 			</div>
-		</div>
+		
 	</section>
+	</div>
 </div>
 </div>
 <?php include 'footer.php' ?>

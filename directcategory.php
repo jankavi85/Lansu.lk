@@ -233,13 +233,7 @@ while($rows = mysqli_fetch_array($result)){
 											<p><?php echo $rows['sub_category'];  ?></p>
 											
 										</div>
-										<!--<div class="product-overlay">
-											<div class="overlay-content">
-												<h2><?php// echo "Rs. ".$rows['price']; ?></h2>
-												<p><?php //echo $rows['description']; ?></p>
-												<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Get Now</a>
-											</div>
-										</div>   -->
+										
 								</div>
 								<div class="choose">
 									<ul class="nav nav-pills nav-justified">

@@ -1,194 +1,162 @@
-	<link rel="stylesheet" type="text/css" href="css/bootstrapItemSearch.css">
-	
-	<?php include "header.php"; ?>
-	<?php include 'database/dbconnect.php'; ?>
+<?php include "header.php"; ?>
+<?php include 'database/dbconnect.php';
 
-	<div class="container">
-		<div class="well well-sm" style="background-color:#ebebe0;">
+$_SESSION["area"] = null;
+$_SESSION["category"] = null;
+
+ ?>
+ <!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="css/bootstrapItemSearch.css">
+</head>
+<body onload="onload_search_item();">
+	<section id=""><!--slider-->
+		<div class="container">
+			<br>
 			<div class="row">
+				<div class="col-sm-5">
+					<h3>What are you looking to search ?</h3>
+				</div>
 				<div class="col-sm-2">
-					<button type="button" class="btn btn-warning btn-md btn-block" data-toggle="modal" data-target="#myModal1"><span class="glyphicon glyphicon-map-marker"></span>    Area</button>
+				    <label class="radio-inline">
+				      	<input type="radio" name="option" id="bidId" value="bid" onclick="activeClosingDate();" checked="checked">Item From Bid
+				    </label>
+				</div>
+				<div class="col-sm-2">
+				    <label class="radio-inline">
+				      	<input type="radio" name="option" id="directId" value="direct" onclick="inactiveClosingDate();">Item From Direct Sale
+				    </label>
+				</div>
+			</div>
+			<div class="row">
+				<div class="well well-sm" style="background-color:#ebebe0;">
+					<div class="row">
+						<div class="col-sm-2">
+							<button id="area" type="button" class="btn btn-warning btn-md btn-block" data-toggle="modal" data-target="#myModal1"><span class="glyphicon glyphicon-map-marker"></span>    Area</button>
+						</div>	
+						<div class="col-sm-2">
+							<button id="category" type="button" class="btn btn-warning btn-md btn-block" data-toggle="modal" data-target="#myModal2"><span class="glyphicon glyphicon-tag"></span>    Category</button>
+						</div>
+						<div>
+							<div class="col-sm-1">
+								<label class="control-label pull-left" for="search">Search Now:</label>
+							</div>	
+							<div class="col-sm-2">
+								<input type="text" name="search" class="form-control pull-left" id="search" placeholder="Search..">
+							</div>	
+							<div class="col-sm-1">
+								<label class="control-label pull-left" for="closing_date">Closing Date:</label>
+							</div>	
+							<div class="col-sm-2">
+								<input type="date" name="closing_date" class="form-control pull-left" id="closing_date">
+							</div>	
+
+							<div class="col-sm-2">
+								<button type="submit" onclick="searchButtonAction();" name="submit" class="btn btn-warning btn-block">Search</button>
+							</div>
+						</div>
+						<!--Above have main structure-->
+
 						<!-- Modal 1 -->
 						<div class="modal fade" id="myModal1" role="dialog">
 							<div class="modal-dialog modal-md">
 							  <div class="modal-content">
 							    <div class="modal-header">
 							      <button type="button" class="close" data-dismiss="modal">&times;</button>
-							      <h4 class="modal-title">Select Area</h4>
+							      <h3 class="modal-title">Select Area</h3>
 							    </div>
 							    
 							    <div class="modal-body">
 							    	<div class="row">
-						              <p>Select District</p>
-						              <!-- District here -->
-						              <button type="button" id="AmparaId" onclick="showItem(this.value);" value="Ampara" class="btn btn-default btn-block">Ampara</button>
-						              <button type="button" id="AnuradhapuraId" onclick="showItem(this.value);" value="Anuradhapura" class="btn btn-default btn-block">Anuradhapura</button>
-						              <button type="button" id="BadullaId" onclick="showItem(this.value);" value="Badulla" class="btn btn-default btn-block">Badulla</button>
-						              <button type="button" id="BatticaloaId" onclick="showItem(this.value);" value="Batticaloa" class="btn btn-default btn-block">Batticaloa</button>
-						              <button type="button" id="ColomboId" onclick="showItem(this.value);" value="Colombo" class="btn btn-default btn-block">Colombo</button>
-						              <button type="button" id="GalleId" onclick="showItem(this.value);" value="Galle" class="btn btn-default btn-block">Galle</button>  
-						              <button type="button" id="GampahaId" onclick="showItem(this.value);" value="Gampaha" class="btn btn-default btn-block">Gampaha</button>
-						              <button type="button" id="HambantotaId" onclick="showItem(this.value);" value="Hambantota" class="btn btn-default btn-block">Hambantota</button>
-						              <button type="button" id="JaffnaId" onclick="showItem(this.value);" value="Jaffna" class="btn btn-default btn-block">Jaffna</button>
-						              <button type="button" id="KalutaraId" onclick="showItem(this.value);" value="Kalutara" class="btn btn-default btn-block">Kalutara</button>
-						              <button type="button" id="KandyId" onclick="showItem(this.value);" value="Kandy" class="btn btn-default btn-block">Kandy</button>
-						              <button type="button" id="KegalleId" onclick="showItem(this.value);" value="Kegalle" class="btn btn-default btn-block">Kegalle</button>
-						              <button type="button" id="KilinochchiId" onclick="showItem(this.value);" value="Kilinochchi" class="btn btn-default btn-block">Kilinochchi</button>
-						              <button type="button" id="KurunegalaId" onclick="showItem(this.value);" value="Kurunegala" class="btn btn-default btn-block">Kurunegala</button>
-						              <button type="button" id="MannarId" onclick="showItem(this.value);" value="Mannar" class="btn btn-default btn-block">Mannar</button>
-						              <button type="button" id="MataleId" onclick="showItem(this.value);" value="Matale" class="btn btn-default btn-block">Matale</button>
-						              <button type="button" id="MataraId" onclick="showItem(this.value);" value="Matara" class="btn btn-default btn-block">Matara</button>
-						              <button type="button" id="MonaragalaId" onclick="showItem(this.value);" value="Monaragala" class="btn btn-default btn-block">Monaragala</button>
-						              <button type="button" id="MullaitivuId" onclick="showItem(this.value);" value="Mullaitivu" class="btn btn-default btn-block">Mullaitivu</button>
-						              <button type="button" id="NuwaraEliyaId" onclick="showItem(this.value);" value="Nuwara Eliya" class="btn btn-default btn-block">Nuwara Eliya</button>
-						              <button type="button" id="PolonnaruwaId" onclick="showItem(this.value);" value="Polonnaruwa" class="btn btn-default btn-block">Polonnaruwa</button>
-						              <button type="button" id="PuttalamId" onclick="showItem(this.value);" value="Puttalam" class="btn btn-default btn-block">Puttalam</button>
-						              <button type="button" id="RatnapuraId" onclick="showItem(this.value);" value="Ratnapura" class="btn btn-default btn-block">Ratnapura</button>
-						              <button type="button" id="TrincomaleeId" onclick="showItem(this.value);" value="Trincomalee" class="btn btn-default btn-block">Trincomalee</button>
-						              <button type="button" id="VavuniyaId" onclick="showItem(this.value);" value="Vavuniya" class="btn btn-default btn-block">Vavuniya</button>					               
+							    		<div class="col-sm-6">
+							              <h4>Select a City or Division</h4>
+							              <br>
+							              <button type="button" id="all_sl_id" onclick="showItemArea1(this.value);" value="Sri Lanka" class="btn btn-default btn-block">All of Sri Lanka</button>
+							              <?php
+											$sql = "SELECT district FROM area GROUP BY district";
+											$result = mysqli_query($dbconnection, $sql);
+
+											if (mysqli_num_rows($result) > 0) {
+										    // output data of each row
+											    while($row = mysqli_fetch_assoc($result)) {
+											        $district=$row['district'];?>
+												    <button type="button" id='<?php echo $district;?>' onclick="showItemArea2(this.value);" value='<?php echo $district;?>' class="btn btn-default btn-block"><?php echo $district; ?><span class="glyphicon glyphicon-menu-right pull-right"></span></button>
+													<?php
+												}
+											} else {
+											    echo "0 results";
+											}
+				                			?>
+								      	</div>
+								      	<div class="col-sm-6" id="item_area3"></div>
 							      	</div>
 							  	</div>
 							    <div class="modal-footer">
 							      	<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
 							    </div>
 							</div>
-						</div>
+						   </div>
+					    </div>
+						<!-- Modal 2 -->
+						<div class="modal fade" id="myModal2" role="dialog">
+							<div class="modal-dialog modal-lg">
+							  <div class="modal-content">
+							    <div class="modal-header">
+							      <button type="button" class="close" data-dismiss="modal">&times;</button>
+							      <h4 class="modal-title">Select Category</h4>
+							    </div>
+							    <div class="modal-body">
+							    	<div class="row">
+							    		<div class="col-sm-6">
+							              <h4>Select a Category</h4>
+							              <br>
+							              <button type="button" id="all_category_id" onclick="showItemCategory1(this.value);" value="All Category" class="btn btn-default btn-block">All Categories</button>
+							              <?php
+											$sql1 = "SELECT category FROM category GROUP BY category";
+											$result1 = mysqli_query($dbconnection, $sql1);
+
+											if (mysqli_num_rows($result1) > 0) {
+										    // output data of each row
+											    while($row = mysqli_fetch_assoc($result1)) {
+											        $category=$row['category'];?>
+												    <button type="button" id='<?php echo $category;?>' onclick="showItemCategory2(this.value);" value='<?php echo $category;?>' class="btn btn-default btn-block"><?php echo $category; ?><span class="glyphicon glyphicon-menu-right pull-right"></span></button>
+													<?php
+												}
+											} else {
+											    echo "0 results";
+											}
+
+				                			?>
+								      	</div>
+								      	<div class="col-sm-6" id="item_area5"></div>
+							      	</div>
+							    </div>
+							    <div class="modal-footer">
+							      <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+							    </div>
+							  </div>
+							</div>
+						</div>	
+
 					</div>
-				</div>	
-				<div class="col-sm-2">
-					<button type="button" class="btn btn-warning btn-md btn-block" data-toggle="modal" data-target="#myModal2"><span class="glyphicon glyphicon-tag"></span>    Category</button>
-					<!-- Modal 2 -->
-					<div class="modal fade" id="myModal2" role="dialog">
-						<div class="modal-dialog modal-lg">
-						  <div class="modal-content">
-						    <div class="modal-header">
-						      <button type="button" class="close" data-dismiss="modal">&times;</button>
-						      <h4 class="modal-title">Select Category</h4>
-						    </div>
-						    <div class="modal-body">
-						      	<div class="row">
-						      	  <!-- Item category here -->
-						      	  	<div class="col-sm-6">
-							      	  <p>Select Category</p>
-								      <button type="button" onclick="showItem2(this.value);" class="btn btn-default btn-block" value="AllCategories"><span class="glyphicon glyphicon-asterisk pull-left"></span>All Categories</button>
-								      <button type="button" onclick="showItem2(this.value);" class="btn btn-default btn-block" value="Electronics"><span class="glyphicon glyphicon-lamp pull-left"></span>Electronics<span class="glyphicon glyphicon-menu-right pull-right"></span></button>
-								      <button type="button" onclick="showItem2(this.value);" class="btn btn-default btn-block" value="HomeItems"><span class="glyphicon glyphicon-home pull-left"></span>Home Items<span class="glyphicon glyphicon-menu-right pull-right"></span></button>
-								      <button type="button" onclick="showItem2(this.value);" class="btn btn-default btn-block" value="FashionHB"><span class="glyphicon glyphicon-sunglasses pull-left"></span>Fashion, Health & Beauty<span class="glyphicon glyphicon-menu-right pull-right"></span></button>
-								      <button type="button" onclick="showItem2(this.value);" class="btn btn-default btn-block" value="HobbySK"><span class="glyphicon glyphicon-flag pull-left"></span>Hobby, Sport & Kids<span class="glyphicon glyphicon-menu-right pull-right"></span></button>
-								      <button type="button" onclick="showItem2(this.value);" class="btn btn-default btn-block" value="BusinessSI"><span class="glyphicon glyphicon-wrench pull-left"></span>Business, Services & Industry<span class="glyphicon glyphicon-menu-right pull-right"></span></button>
-								      <button type="button" onclick="showItem2(this.value);" class="btn btn-default btn-block" value="Education"><span class="glyphicon glyphicon-education pull-left"></span>Education<span class="glyphicon glyphicon-menu-right pull-right"></span></button>
-								      <button type="button" onclick="showItem2(this.value);" class="btn btn-default btn-block" value="Other"><span class="glyphicon glyphicon-trash pull-left"></span>Other</button>	
-						    		</div>
-						    		 
-						    		<div class="col-sm-6" id="item_area2">
-						    			
-						    		</div>
-						    	</div>
-						    </div>
-						    <div class="modal-footer">
-						      <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-						    </div>
-						  </div>
-						</div>
-					</div>		
-				</div>
-				<div>
-					<form action="" method="POST">
-						<div class="col-sm-1">
-							<label class="control-label pull-left" for="search">Search Now:</label>
-						</div>	
-						<div class="col-sm-2">
-							<input type="text" name="search"class="form-control pull-left" id="search" placeholder="Search..">
-						</div>	
-						<div class="col-sm-1">
-							<label class="control-label pull-left" for="closing_date">Closing Date:</label>
-						</div>	
-						<div class="col-sm-2">
-							<input type="date" name="closing_date" class="form-control pull-left" id="closing_date">
-						</div>	
-						<div class="col-sm-2">
-							<button type="submit" name="submit" class="btn btn-warning btn-block">Search</button>
-						</div>
-					</form>
-
-				</div>
-					
-			</div>
-		</div>
-		<div class="row">
+				</div>		
+			</div>	
+			<div class="row" id="item_area"></div>
 			
-			<div class="col-sm-12" id="item_area">
-				<?php
-					function test_input($data) {
-						$data = trim($data);
-						$data = stripslashes($data);
-						$data = htmlspecialchars($data);
-						return $data;
-					}
-
-					if(isset($_POST['submit'])) {	
-						$search = test_input($_POST['search']);
-						$closing_date = test_input($_POST['closing_date']);
-
-						$sql = "SELECT * FROM additem WHERE price = '$search%' OR district_area LIKE '$search%' OR district LIKE '$search%' OR category LIKE '$search%' OR title LIKE '$search%'";
-
-						$result = mysqli_query($dbconnection, $sql);
-
-						if (mysqli_num_rows($result) > 0) {
-						    // output data of each row
-						    ?>
-						    <div class="list-group">
-							    <?php
-							    while($row = mysqli_fetch_assoc($result)) {
-							        $title=$row['title'];
-							        $price=$row['price'];
-							        ?>
-							        <a href="ss" class="list-group-item">
-							        	<div class="row">
-											<div class="col-sm-2">
-												<img src="images/home/new.png"/>
-											</div>
-											<div class="col-sm-6">
-												<?php echo $title;?>
-											</div>
-											<div class="col-sm-4">
-												<?php echo "Rs.".$price;?>
-											</div>
-										</div>						        	
-							        </a>
-							        <?php
-							        //echo "<br>";
-							    }
-							    ?>
-						    </div>
-						    <?php
-						} else {
-						    echo "0 results";
-						}
-
-						mysqli_close($dbconnection);
-
-						// 3 .button press kalama wenna ona deya ajax walin sadeemata pera ikman.kl,bidnow.lk refer kranna.. 
-
-					}
-				?>
-			</div>
+			<div class="row"><div class=""><div data-ride="carousel" style="width:700px; height:300px; margin-left:auto;"></div></div></div>
 			
 		</div>
+	</section><!--/slider-->
 
-	
-		
-	
 	<?php include "footer.php" ; ?>
 	
-
-  	<script src="js/itemSearch.js"></script> <!-- This is for items_search-->
+    <script src="js/itemSearch.js"></script>
     <script src="js/jquery.js"></script>
 	<script src="js/bootstrap.min.js"></script>
 	<script src="js/jquery.scrollUp.min.js"></script>
 	<script src="js/price-range.js"></script>
     <script src="js/jquery.prettyPhoto.js"></script>
     <script src="js/main.js"></script>
-
 </body>
 </html>

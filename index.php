@@ -1,6 +1,7 @@
 <?php include "header.php"; ?>
 
 
+
 	<section id="slider"><!--slider-->
 		<div class="container">
 			<div class="row">

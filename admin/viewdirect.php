@@ -1,17 +1,18 @@
+<?php include 'viewheader.php'; ?>
 <?php
-include "header.php";
+
 $id=$_GET['value'];
-include "database/dbconnect.php";
+include "../database/dbconnect.php";
 $sql="SELECT category,sub_category,district,district_area,conditionOn,item_avatar,title,description,price,delivery_option,user_name,phone_number FROM directitem INNER JOIN user on directitem.user_id=user.user_id WHERE directitem_id='$id';";
 $result = mysqli_query($dbconnection, $sql);
 $rows = mysqli_fetch_array($result);
 
 ?>
-<link href="css/viewdirect.css" rel="stylesheet">
 
 
-
-
+<br><br><br><br>
+<link href="../css/main.css" rel="stylesheet">
+<div class="col-sm-8 col-sm-offset-2">
 <div class="panel panel-default" id='paneladd'>
   <div class="panel-heading" ><h3><?php echo $rows['title']; ?></h3></div>
   <div class="panel-body" >
@@ -29,14 +30,14 @@ $rows = mysqli_fetch_array($result);
 							<div class="item active">
 								
 								<div class="col-sm-4">
-									<img src="<?php echo $rows['item_avatar']; ?>" height='250' width="300" alt="" />
+									<img src="<?php echo '../'.$rows['item_avatar'];  ?>" height='250' width="300" alt="" />
 									
 								</div>
 							</div>
 							<div class="item">
 								
 								<div class="col-sm-4">
-									<img src="<?php echo $rows['item_avatar']; ?>" height='250' width="300" alt="" />
+									<img src="<?php echo '../'.$rows['item_avatar'];  ?>" height='250' width="300" alt="" />
 									
 								</div>
 							</div>
@@ -44,7 +45,7 @@ $rows = mysqli_fetch_array($result);
 							<div class="item">
 								
 								<div class="col-sm-4">
-									<img src="<?php echo $rows['item_avatar']; ?>" height='250' width="300" alt="" />
+									<img src="<?php echo '../'.$rows['item_avatar']; ?>" height='250' width="300" alt="" />
 									
 								</div>
 							</div>
@@ -58,25 +59,20 @@ $rows = mysqli_fetch_array($result);
 							<i class="fa fa-angle-right"></i>
 					</a>
 				</div>
-				<h3><b>About<b></h3><br>
-				
-		<p> <?php echo $rows['description'];  ?></p>	
-		
-		
 		</div>
-		<div class="col-sm-4 col-sm-offset-2">
-		<p><span class="glyphicon glyphicon-euro glyphicon-color"></span> <?php echo "Price		: "."LKR ".$rows['price'];  ?></p><br>
-		<p><span class="glyphicon glyphicon-th-large glyphicon-color " ></span><?php echo "Category		: ".$rows['category'];  ?></p><br>
+		<div class="col-sm-4 col-sm-offset-4">
+		<p><span class="glyphicon glyphicon-th-large glyphicon-color"></span> <?php echo "Category		: ".$rows['category'];  ?></p>
 		
-		<p><span class="glyphicon glyphicon-th glyphicon-color"></span> <?php echo "Sub Category	:".$rows['sub_category'];  ?></p><br>
+		<p><span class="glyphicon glyphicon-th glyphicon-color"></span> <?php echo "Sub Category	:".$rows['sub_category'];  ?></p>
 		
-		<p><span class="glyphicon glyphicon-map-marker glyphicon-color"></span> <?php echo "District		:".$rows['district'];  ?></p><br>
+		<p><span class="glyphicon glyphicon-map-marker glyphicon-color"></span> <?php echo "District		:".$rows['district'];  ?></p>
 		
-		<p><span class="glyphicon glyphicon-road glyphicon-color"></span>  <?php echo "Area			:".$rows['district_area'];  ?></p><br>	
+		<p><span class="	glyphicon glyphicon-road glyphicon-color"></span>  <?php echo "Area			:".$rows['district_area'];  ?></p>	
 		
-			<p><span class="glyphicon glyphicon-phone glyphicon-color"></span>  <?php echo "Contact 			:".$rows['phone_number'];  ?></p><br>
+			<p><span class="		glyphicon glyphicon-phone glyphicon-color"></span>  <?php echo "Contact 			:".$rows['phone_number'];  ?></p>
 
-			
+		<h3><b>About<b></h3>
+		<p> <?php echo $rows['description'];  ?></p>		
 		</div>
 					
 				
@@ -86,18 +82,17 @@ $rows = mysqli_fetch_array($result);
 </div>
 
 
-
 </div>
 </div>
 </div>
+</div>
 
 
-<?php include 'footer.php' ; ?>
 
-<script src="js/jquery.js"></script>
-	<script src="js/bootstrap.min.js"></script>
-	<script src="js/jquery.scrollUp.min.js"></script>
-	<script src="js/price-range.js"></script>
-    <script src="js/jquery.prettyPhoto.js"></script>
-    <script src="js/main.js"></script>
+<script src="../js/jquery.js"></script>
+	<script src="../js/bootstrap.min.js"></script>
+	<script src="../js/jquery.scrollUp.min.js"></script>
+	<script src="../js/price-range.js"></script>
+    <script src="../js/jquery.prettyPhoto.js"></script>
+    <script src="../js/main.js"></script>
 

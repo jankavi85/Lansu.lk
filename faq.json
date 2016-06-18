@@ -1,0 +1,22 @@
+myFunction([
+{
+"Type": "Basics",
+"Question": "How to Log into your LANSU Account",
+"Answer": "To log into your LANSU.LK account:<br/><ul><li>Make sure no one else is logged into Facebook on your computer</li><li>Go to the top of www.LANSU.LK/login.php</li><li>Enter your E-mail and password</li><li> Click Log In</li></ul>"
+}
+,{
+"Type": "Basics",
+"Question": "How do you sign up",
+"Answer": "To sign up with LANSU.LK visit www.LANSU.LK/login.php. Give required information in New User Signup section. You need to give your Name, valid Email address and password for signup. After that click Signup button. You will recived confirmation email."
+}
+,{
+"Type": "Basics",
+"Question": "Can I remove a item?",
+"Answer": "http://www.w3schools.com/css/default.asp"
+}
+,{
+"Type": "Mobile",
+"Question": "Can I remove a item222?",
+"Answer": "http://www.w3schools.com/css/default.asp"
+}
+]);

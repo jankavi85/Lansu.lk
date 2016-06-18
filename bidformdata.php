@@ -3,7 +3,6 @@
 session_start();
 include "database/dbconnect.php"; 	  
 $useremail= $_SESSION["lansu_email"] ;
-echo $useremail;
 $sql="SELECT user_id FROM user WHERE user_email='$useremail';";
 $result=$dbconnection->query($sql);
 $rows = mysqli_fetch_assoc($result);
@@ -34,14 +33,14 @@ $userid= $rows['user_id'];
 		  {
 			$image_file='images/additem/bid/'.strval($userid)."/".$file_name;
 			move_uploaded_file($file_tmp,$image_file);
-            echo "Success";
+           // echo "Success";
 		  }
 	  else{
 		  
 		 mkdir('images/additem/bid/'.strval($userid));
 		 $image_file='images/additem/bid/'.strval($userid)."/".$file_name;
          move_uploaded_file($file_tmp,$image_file);
-         echo "Success";
+        // echo "Success";
 	  }
 		 
       }else{
@@ -63,10 +62,17 @@ $userid= $rows['user_id'];
 	  $phonenumber = $_POST['phonenumber'];
 	  $deliver= $_POST['deliver'];
 	  $addingtime = date('Y-m-d H:i:s');
-	  $closingtime = $_POST['data_time'];
+	  $priceIncrement = $_POST['priceIncrement'];
+	  
+	  
+	  $closingtime = $_POST['data_time']; 
+	  $detail = explode("-",$closingtime);
+	  $time  = date("H:i:s", strtotime( $detail[1]));
+	  $closingtime = $detail[0]." ".$time;
+	   
 	
-	 
- $sql="INSERT INTO biditem(user_id,category,sub_category,district,district_area,conditionOn,item_avatar,title,description,price,delivery_option,closingtime,addingtime,item_accept)VALUES('$userid','$category','$sub_category','$district','$area','$condition','$item_avatar','$title','$description','$price','$deliver','$closingtime','$addingtime','0')";	
+ 
+ $sql="INSERT INTO biditem(user_id,category,sub_category,district,district_area,conditionOn,item_avatar,title,description,price,priceIncrement,delivery_option,closingtime,addingtime,item_accept)VALUES('$userid','$category','$sub_category','$district','$area','$condition','$item_avatar','$title','$description','$price','$priceIncrement','$deliver','$closingtime','$addingtime','0')";	
 
  $result = mysqli_query($dbconnection, $sql);
  

@@ -145,7 +145,7 @@ else
                             <ul class="nav navbar-nav navbar-right">
                                 <li><a href="index.php"><?php echo HOME; ?></a></li>
                                 <li><a href="items_search.php"><?php echo ALL_ITEMS; ?></a></li>  
-								
+								<li><a href="faq.php">Faq</a></li>  
                            </div>
 						
                     </nav>

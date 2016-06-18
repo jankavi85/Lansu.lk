@@ -1,5 +1,10 @@
+
 .glyphicon {
     font-size: 15px;
+}
+.input-group-addon {
+	
+    text-align:left;
 }
 
 #upload{
@@ -22,9 +27,15 @@
   overflow: hidden;
 }
 
+
 .bid-form {
 
 }
+
+.dis{
+	display:none;
+}
+
 
 
 .bid-form h2{
@@ -50,6 +61,8 @@
   padding-left: 10px;
   width: 100%;
 }
+
+
 .bid-form form input[type=radio]{
   margin-left: 10px;
   margin-right: 20px;

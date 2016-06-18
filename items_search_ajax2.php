@@ -1,63 +1,29 @@
-<p>Select Sub Category</p>
 <?php
+	include 'database/dbconnect.php';
 	$category = strval($_GET['category']);
-	echo $category;
 
-	if ($category == "AllCategories") {
-		echo $category;
-	}elseif ($category == "Electronics") {
-		?>
-		<button type="button"  class="btn btn-default btn-block" value="Electronics">All Electronics</button>
-		<button type="button"  class="btn btn-default btn-block" value="Electronics">Mobile Phone Accessories</button>
-		<button type="button"  class="btn btn-default btn-block" value="Electronics">Computer Accessories & Tablets</button>
-		<button type="button"  class="btn btn-default btn-block" value="Electronics">TVs & Radios</button>
-		<button type="button"  class="btn btn-default btn-block" value="Electronics">Cameras & Video Accessories</button>
-		<button type="button"  class="btn btn-default btn-block" value="Electronics">Audio & MP3</button>
-		<button type="button"  class="btn btn-default btn-block" value="Electronics">Other Electronics</button>
+	//$_SESSION["area"] = null;
+	//$_SESSION["category"] = $category;
+
+	if($category == "All Category"){
+
+	}else{
+		?><h4>Select a Sub Category</h4><br>
+		<button type="button" id='<?php echo $category;?>' onclick="showItemCategory4(this.value);" value='<?php echo $category;?>' class="btn btn-default btn-block">All <?php echo $category; ?></button><br>
 		<?php
-	}elseif ($category == "HomeItems") {
-		?>
-		<button type="button"  class="btn btn-default btn-block" value="Electronics">All Home Items</button>
-		<button type="button"  class="btn btn-default btn-block" value="Electronics">Furniture</button>
-		<button type="button"  class="btn btn-default btn-block" value="Electronics">Home Appliances</button>
-		<button type="button"  class="btn btn-default btn-block" value="Electronics">Other Home Items</button>
-		<?php
-	}elseif ($category == "FashionHB") {
-		?>
-		<button type="button"  class="btn btn-default btn-block" value="Electronics">All Fashion, Health & Beauty</button>
-		<button type="button"  class="btn btn-default btn-block" value="Electronics">Clothing</button>
-		<button type="button"  class="btn btn-default btn-block" value="Electronics">Shoes & Footwear</button>
-		<button type="button"  class="btn btn-default btn-block" value="Electronics">Jewellery</button>
-		<button type="button"  class="btn btn-default btn-block" value="Electronics">Sunglasses</button>
-		<button type="button"  class="btn btn-default btn-block" value="Electronics">Watches</button>
-		<button type="button"  class="btn btn-default btn-block" value="Electronics">Other Fashion Accessories</button>
-		<button type="button"  class="btn btn-default btn-block" value="Electronics">Health & Beauty Products</button>
-		<button type="button"  class="btn btn-default btn-block" value="Electronics">Other Personal Items</button>
-		<?php
-	}elseif ($category == "HobbySK") {  
-		?>
-		<button type="button"  class="btn btn-default btn-block" value="Electronics">All Hobby, Sport & Kids</button>
-		<button type="button"  class="btn btn-default btn-block" value="Electronics">Musical Instruments</button>
-		<button type="button"  class="btn btn-default btn-block" value="Electronics">Sports Equipment</button>
-		<button type="button"  class="btn btn-default btn-block" value="Electronics">Art & Collectibles</button>
-		<button type="button"  class="btn btn-default btn-block" value="Electronics">Movies & CD/DVD</button>
-		<button type="button"  class="btn btn-default btn-block" value="Electronics">Video Games & Consoles</button>
-		<button type="button"  class="btn btn-default btn-block" value="Electronics">Children's Items</button>
-		<button type="button"  class="btn btn-default btn-block" value="Electronics">Other Hobby, Sport & Kids Items</button>
-		<?php
-	}elseif ($category == "BusinessSI") {
-		?>
-		<button type="button"  class="btn btn-default btn-block" value="Electronics">All Business, Services & Industry</button>
-		<button type="button"  class="btn btn-default btn-block" value="Electronics">Industry Tools & Machinery</button>
-		<button type="button"  class="btn btn-default btn-block" value="Electronics">Medical Equipment & Supplies</button>
-		<?php
-	}elseif ($category == "Education") {
-		?>
-		<button type="button"  class="btn btn-default btn-block" value="Electronics">All Education</button>
-		<button type="button"  class="btn btn-default btn-block" value="Electronics">Books</button>
-		<button type="button"  class="btn btn-default btn-block" value="Electronics">Other Education</button>
-		<?php
-	}elseif ($category == "Other") {
-		echo $category;
+		$sql = "SELECT sub_category FROM category WHERE category = '".$category."'";
+		$result = mysqli_query($dbconnection, $sql);
+
+		if (mysqli_num_rows($result) > 0) {
+			    while($row = mysqli_fetch_assoc($result)) {
+			        $sub_category=$row['sub_category'];?>
+					<button type="button" id='<?php echo $sub_category;?>' onclick="showItemCategory3(this.value);" value='<?php echo $sub_category;?>' class="btn btn-default btn-block"><?php echo $sub_category; ?></button>
+					<?php
+			    }
+		
+		} else {
+		    echo "0 results";
+		}
 	}
+	mysqli_close($dbconnection);
 ?>

@@ -15,9 +15,7 @@
 									<div class="iframe-img">
 										<img src="images/home/phone.jpg" alt="" />
 									</div>
-									<div class="overlay-icon">
-										<i class="fa fa-play-circle-o"></i>
-									</div>
+									
 								</a>
 								<p>Circle of Hands</p>
 								<h2>28 DEC 2016</h2>
@@ -30,9 +28,7 @@
 									<div class="iframe-img">
 										<img src="images/home/girl1.jpg" alt="" />
 									</div>
-									<div class="overlay-icon">
-										<i class="fa fa-play-circle-o"></i>
-									</div>
+									
 								</a>
 								<p>Watch</p>
 								<h2>24 DEC 2016</h2>
@@ -44,9 +40,6 @@
 								<a href="#">
 									<div class="iframe-img">
 										<img src="images/home/lap.jpg" alt="" />
-									</div>
-									<div class="overlay-icon">
-										<i class="fa fa-play-circle-o"></i>
 									</div>
 								</a>
 								<p>Laptop</p>
@@ -60,9 +53,7 @@
 									<div class="iframe-img">
 										<img src="images/home/com.jpg" alt="" />
 									</div>
-									<div class="overlay-icon">
-										<i class="fa fa-play-circle-o"></i>
-									</div>
+									
 								</a>
 								<p>Computer</p>
 								<h2>24 MAY 2016</h2>
@@ -87,7 +78,7 @@
 							<h2>Help</h2>
 							<ul class="nav nav-pills nav-stacked">
 								<li><a href="">Contact Us</a></li>
-								<li><a href="">FAQ's</a></li>
+								<li><a href="faq.php">FAQ's</a></li>
 							</ul>
 						</div>
 					</div>

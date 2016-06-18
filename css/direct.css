@@ -14,10 +14,13 @@
 
 #form {
   display: block;
-  margin-bottom: 185px;
+  margin-bottom: 85px;
   margin-top: 50px;
   overflow: hidden;
  
+}
+.dis{
+	display:none;
 }
 
 .bid-form {
@@ -46,7 +49,7 @@
   margin-bottom: 10px;
   outline: medium none;
   padding-left: 10px;
-  width: 100%;
+  width:100%;
 }
 .bid-form form input[type=radio]{
   margin-left: 10px;
@@ -75,6 +78,7 @@
 .bid-form form select{
  margin-bottom: 23px;
  margin-top: 23px;
+ 
 }
 .bid-form form button {
  margin-bottom: 23px;

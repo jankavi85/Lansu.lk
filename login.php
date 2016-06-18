@@ -19,7 +19,9 @@ $query = "SELECT user_email FROM user";
   ?> 
 
 
-
+<script src="js/bootbox.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.js"></script>
 
 <script>
 function validateform(emailid){  
@@ -34,10 +36,13 @@ var dotposition=emailid.value.lastIndexOf(".");
 for(var i = 0; i < email.length; i++){
           if(email[i]==emailid.value)
 		  {
-			alert("Email already exist");
-			emailid.value="";
+		    alert("Email already exist");
+		    emailid.value="";
 			emailid.focus();
-			 return false;   
+			 return false; 
+		
+		
+			  
 		  }
 		
         }
@@ -90,12 +95,11 @@ function confirmvalid()
 }
 
 </script>
-
+<div class="container">
 <div class="col-sm-10 col-sm-offset-1">
 <div class="panel panel-warning">
 <div class="panel-body">
 	<section id="form"><!--form-->
-		<div class="container">
 			<div class="row">
 				<div class="col-sm-4 col-sm-offset-1">
 					<div class="login-form"><!--login form-->
@@ -129,8 +133,9 @@ function confirmvalid()
 					</div><!--/sign up form-->
 				</div>
 			</div>
-		</div>
+		
 		</section><!--/form-->
+		</div>
 		</div>
 </div>
 </div>	

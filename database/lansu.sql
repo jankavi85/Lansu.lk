@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 03, 2016 at 08:05 PM
+-- Generation Time: Jun 18, 2016 at 01:19 PM
 -- Server version: 5.6.17
 -- PHP Version: 5.5.12
 
@@ -247,20 +247,14 @@ CREATE TABLE IF NOT EXISTS `biditem` (
   `title` varchar(40) NOT NULL,
   `description` varchar(300) NOT NULL,
   `price` int(15) NOT NULL,
+  `priceIncrement` int(15) NOT NULL,
   `delivery_option` varchar(15) NOT NULL,
   `closingtime` varchar(30) NOT NULL,
   `addingtime` varchar(18) NOT NULL,
   `item_accept` varchar(5) NOT NULL DEFAULT 'No',
   PRIMARY KEY (`biditem_id`),
   KEY `user_id` (`user_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
-
---
--- Dumping data for table `biditem`
---
-
-INSERT INTO `biditem` (`biditem_id`, `user_id`, `category`, `sub_category`, `district`, `district_area`, `conditionOn`, `item_avatar`, `title`, `description`, `price`, `delivery_option`, `closingtime`, `addingtime`, `item_accept`) VALUES
-(1, 2, 'Electronics', 'Computer Accessories', 'Matale', 'Sigiriya', 'New', 'images/additem/bid/2/en.PNG', 'g', 'hhh', 700, 'meeting', '17 September 2016 - 03:50 pm', '2016-06-02 04:42:3', '0');
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=12 ;
 
 -- --------------------------------------------------------
 
@@ -359,7 +353,7 @@ CREATE TABLE IF NOT EXISTS `directitem` (
   `item_accept` varchar(5) NOT NULL DEFAULT 'No',
   PRIMARY KEY (`directitem_id`),
   KEY `user_id` (`user_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=5 ;
 
 -- --------------------------------------------------------
 
@@ -395,16 +389,20 @@ CREATE TABLE IF NOT EXISTS `user` (
   `user_activation` int(5) NOT NULL,
   `user_type` varchar(8) DEFAULT NULL,
   PRIMARY KEY (`user_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=8 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=12 ;
 
 --
 -- Dumping data for table `user`
 --
 
 INSERT INTO `user` (`user_id`, `user_name`, `user_email`, `user_password_hash`, `login_type`, `phone_number`, `address`, `user_activation`, `user_type`) VALUES
-(2, 'janith', 'kavinda@gmail.com', 'fcea920f7412b5da7be0cf42b8c93759', 'none', 0, '', 1, NULL),
-(3, 'kemal', 'kemal@gmail.com', 'fcea920f7412b5da7be0cf42b8c93759', 'none', 0, '', 1, NULL),
-(7, 'lansu', 'lansu@gmail.com', 'fcea920f7412b5da7be0cf42b8c93759', '', 0, '', 1, 'admin');
+(2, 'janith', 'kavinda@gmail.com', 'fcea920f7412b5da7be0cf42b8c93759', 'none', 1234543216, '', 1, NULL),
+(3, 'kemal', 'kemal@gmail.com', 'fcea920f7412b5da7be0cf42b8c93759', 'none', 1234567890, '', 1, NULL),
+(7, 'lansu', 'lansu@gmail.com', 'fcea920f7412b5da7be0cf42b8c93759', '', 99012345, '', 1, 'admin'),
+(8, 'nisal', 'nisal@gmail.com', 'fcea920f7412b5da7be0cf42b8c93759', 'none', 12334, '', 1, NULL),
+(9, 'a', 'a@gmail.com', 'fcea920f7412b5da7be0cf42b8c93759', 'none', 0, '', 1, NULL),
+(10, 'malith', 'malith@gmail.com', 'fcea920f7412b5da7be0cf42b8c93759', 'none', 771234544, '120 gamunupura talawathugoda', 1, NULL),
+(11, 'janith@gmail.com', 'janith@gmail.com', 'fcea920f7412b5da7be0cf42b8c93759', 'none', 776543210, '', 1, NULL);
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
